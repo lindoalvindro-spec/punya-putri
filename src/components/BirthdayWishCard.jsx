@@ -120,10 +120,10 @@ export default function BirthdayWishCard({ onRestart }) {
               JANJI KULIAH DI UI BARENG! ✨
             </div>
             
-            {/* Floral Decor (Bottom Right Corner) */}
+            {/* Floral Decor (Top Left Corner) */}
             <img src="/Untitled - July 29, 2026 at 22.02.49.png" alt="Decor" style={{
-              position: 'absolute', bottom: -30, right: -30, width: 140,
-              transform: 'rotate(15deg)', opacity: 0.7, pointerEvents: 'none',
+              position: 'absolute', top: -20, left: -10, width: 100,
+              transform: 'rotate(-15deg)', opacity: 0.85, pointerEvents: 'none',
               filter: 'drop-shadow(0 4px 12px rgba(212,69,108,0.15))'
             }} onError={(e) => e.target.style.display = 'none'} />
           </div>
