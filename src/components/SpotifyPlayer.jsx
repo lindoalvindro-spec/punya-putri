@@ -180,7 +180,7 @@ export default function SpotifyPlayer() {
               zIndex: 2, overflow: 'hidden', border: '2px solid #fff',
               boxShadow: '0 8px 24px rgba(212,69,108,0.2)',
             }}>
-              <img src="/photo4.jpg" alt="Album" style={{
+              <img src="/foto-lagu.jpg" alt="Album" style={{
                 width: '100%', height: '100%', objectFit: 'cover',
               }} onError={(e) => {
                 e.target.src = '/bestie1.jpg';
