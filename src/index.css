@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
-  --pink-deep: #d4456c;
-  --pink-mid: #f06292;
-  --pink-soft: #f8a4be;
-  --pink-blush: #fce4ec;
-  --pink-whisper: #fff0f3;
-  --cream: #fffaf8;
-  --rose-gold: #b76e79;
-  --berry: #3d1528;
-  --berry-light: #6b2d4a;
-  --lavender: #e8d5f5;
-  --gold-accent: #d4a574;
+  --pink-deep: #c83b64;
+  --pink-mid: #e85d88;
+  --pink-soft: #f497b5;
+  --pink-blush: #fce8ef;
+  --pink-whisper: #fff4f7;
+  --cream: #fffcf9;
+  --rose-gold: #b86d78;
+  --berry: #2d101e;
+  --berry-light: #5a263f;
+  --lavender: #ebdcf7;
+  --gold-accent: #d4a359;
+  --gold-light: #f7e7c4;
+  --gold-shadow: rgba(212, 163, 89, 0.25);
 
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 183, 197, 0.35);
-  --glass-shadow: 0 8px 32px rgba(212, 69, 108, 0.12);
+  --glass-bg: rgba(255, 252, 249, 0.78);
+  --glass-border: rgba(212, 163, 89, 0.25);
+  --glass-shadow: 0 12px 40px rgba(45, 16, 30, 0.12);
 
   --font-display: 'Dancing Script', cursive;
   --font-cute: 'Fredoka', sans-serif;
@@ -39,7 +41,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: #1a0a10;
+  background: #14070d;
   color: var(--berry);
   min-height: 100dvh;
   display: flex;

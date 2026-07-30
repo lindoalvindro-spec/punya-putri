@@ -1,118 +1,112 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { Crown } from 'lucide-react';
 import gsap from 'gsap';
 
 export default function SplashScreen({ onStart }) {
   const containerRef = useRef(null);
   const photoRef = useRef(null);
   const overlayRef = useRef(null);
+  const badgeRef = useRef(null);
   const line1Ref = useRef(null);
   const line2Ref = useRef(null);
   const line3Ref = useRef(null);
   const btnRef = useRef(null);
-  const lucu1Ref = useRef(null);
-  const lucu2Ref = useRef(null);
   const sparklesRef = useRef([]);
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setReady(true);
-    const tl = gsap.timeline({ delay: 0.3 });
+    const tl = gsap.timeline({ delay: 0.2 });
 
-    // Photo zoom in slowly
+    // Background Photo Reveal
     tl.fromTo(photoRef.current,
-      { scale: 1.3, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1.8, ease: 'power2.out' }
+      { scale: 1.25, opacity: 0, filter: 'blur(10px)' },
+      { scale: 1, opacity: 0.9, filter: 'blur(0px)', duration: 1.8, ease: 'power2.out' }
     );
 
-    // Overlay fade
+    // Dark Gradient Overlay
     tl.fromTo(overlayRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 0.8, ease: 'power1.in' },
+      { opacity: 1, duration: 0.8 },
       0.3
     );
 
-    // Lucu images slide up and bounce
-    tl.fromTo(lucu1Ref.current,
-      { opacity: 0, y: 100, rotation: -20 },
-      { opacity: 1, y: 0, rotation: -12, duration: 1.2, ease: 'elastic.out(1, 0.6)' },
+    // VIP Badge Entrance
+    tl.fromTo(badgeRef.current,
+      { opacity: 0, y: -20, scale: 0.8 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.8)' },
       0.6
     );
-    tl.fromTo(lucu2Ref.current,
-      { opacity: 0, y: 100, rotation: 20 },
-      { opacity: 1, y: 0, rotation: 12, duration: 1.2, ease: 'elastic.out(1, 0.6)' },
-      0.8
-    );
 
-    // Line 1: letter by letter
+    // Subtitle Line
     tl.fromTo(line1Ref.current,
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-      1.0
+      0.9
     );
 
-    // Line 2
+    // Main Title Line (Nazwa Amelia)
     tl.fromTo(line2Ref.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-      1.6
+      { opacity: 0, y: 25, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out' },
+      1.3
     );
 
-    // Line 3 (emoji)
+    // Tagline / Emojis
     tl.fromTo(line3Ref.current,
-      { opacity: 0, scale: 0.5 },
-      { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2)' },
-      2.2
+      { opacity: 0, scale: 0.6 },
+      { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(2)' },
+      1.8
     );
 
-    // Sparkles float in
+    // Floating Ambient Sparkles
     sparklesRef.current.forEach((el, i) => {
       if (el) {
         tl.fromTo(el,
-          { opacity: 0, scale: 0, rotation: -90 },
-          {
-            opacity: 0.7, scale: 1, rotation: 0,
-            duration: 0.6, ease: 'back.out(2)',
-          },
-          1.4 + i * 0.15
+          { opacity: 0, scale: 0, rotation: -45 },
+          { opacity: 0.8, scale: 1, rotation: 0, duration: 0.6, ease: 'back.out(2)' },
+          1.2 + i * 0.12
         );
-        // Continuous float
+
         gsap.to(el, {
-          y: `${-8 + Math.random() * 16}`,
-          x: `${-5 + Math.random() * 10}`,
-          duration: 2 + Math.random() * 2,
-          repeat: -1, yoyo: true,
+          y: `${-10 + Math.random() * 20}`,
+          x: `${-8 + Math.random() * 16}`,
+          duration: 2.5 + Math.random() * 2,
+          repeat: -1,
+          yoyo: true,
           ease: 'sine.inOut',
-          delay: i * 0.3,
+          delay: i * 0.2,
         });
       }
     });
 
-    // Button
+    // Start Button Entrance
     tl.fromTo(btnRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
-      2.8
+      { opacity: 0, y: 25 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
+      2.2
     );
   }, []);
 
   const handleStart = () => {
     const tl = gsap.timeline();
     tl.to(containerRef.current, {
-      scale: 1.05, opacity: 0,
-      duration: 0.5, ease: 'power2.in',
+      scale: 1.04,
+      opacity: 0,
+      filter: 'blur(8px)',
+      duration: 0.45,
+      ease: 'power2.in',
       onComplete: onStart,
     });
   };
 
   const sparkleData = [
-    { emoji: '✨', top: '12%', left: '8%', size: '1.4rem' },
-    { emoji: '💕', top: '18%', right: '12%', size: '1.2rem' },
-    { emoji: '🌸', top: '35%', left: '5%', size: '1.1rem' },
-    { emoji: '⭐', top: '28%', right: '6%', size: '1rem' },
-    { emoji: '💗', bottom: '32%', left: '10%', size: '1.3rem' },
-    { emoji: '✿', bottom: '28%', right: '8%', size: '1.1rem' },
-    { emoji: '🩷', top: '50%', left: '3%', size: '1rem' },
-    { emoji: '♡', top: '45%', right: '4%', size: '1.2rem' },
+    { emoji: '✨', top: '10%', left: '8%', size: '1.4rem' },
+    { emoji: '🌟', top: '16%', right: '10%', size: '1.2rem' },
+    { emoji: '🏛️', top: '32%', left: '6%', size: '1.1rem' },
+    { emoji: '⭐', top: '28%', right: '8%', size: '1.1rem' },
+    { emoji: '🌸', bottom: '30%', left: '10%', size: '1.3rem' },
+    { emoji: '💫', bottom: '26%', right: '9%', size: '1.2rem' },
+    { emoji: '💖', top: '48%', left: '4%', size: '1rem' },
+    { emoji: '👑', top: '44%', right: '5%', size: '1.3rem' },
   ];
 
   return (
@@ -121,33 +115,33 @@ export default function SplashScreen({ onStart }) {
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', overflow: 'hidden',
     }}>
-      {/* Background Photo */}
+      {/* Background Hero Photo (gambar 21.jpeg) */}
       <img
         ref={photoRef}
-        src="/gambar 3.jpeg"
-        alt=""
+        src="/gambar 21.jpeg"
+        alt="Nazwa Amelia"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
         }}
-        onError={(e) => { e.target.src = '/bestie1.jpg'; }}
+        onError={(e) => { e.target.src = '/gambar 22.jpeg'; }}
       />
 
-      {/* Dark Gradient Overlay */}
+      {/* Luxury Dark Gradient Overlay */}
       <div ref={overlayRef} style={{
         position: 'absolute', inset: 0, opacity: 0,
-        background: 'linear-gradient(180deg, rgba(61,21,40,0.5) 0%, rgba(61,21,40,0.75) 50%, rgba(26,10,16,0.85) 100%)',
+        background: 'radial-gradient(circle at center, rgba(45, 16, 30, 0.55) 0%, rgba(20, 7, 13, 0.88) 75%, rgba(10, 3, 6, 0.96) 100%)',
       }} />
 
       {/* Lucu Characters */}
-      <img ref={lucu1Ref} src="/lucu1 no bg.png" alt="Lucu 1" style={{
-        position: 'absolute', bottom: '15%', left: '-5%', width: 140, 
+      <img src="/lucu1 no bg.png" alt="Lucu 1" style={{
+        position: 'absolute', bottom: '15%', left: '-2%', width: 130, 
         zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.4))'
-      }} />
-      <img ref={lucu2Ref} src="/lucu 2 no bg.png" alt="Lucu 2" style={{
-        position: 'absolute', bottom: '25%', right: '-5%', width: 130, 
+      }} onError={(e) => e.target.style.display = 'none'} />
+      <img src="/lucu 2 no bg.png" alt="Lucu 2" style={{
+        position: 'absolute', bottom: '25%', right: '-2%', width: 120, 
         zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.4))'
-      }} />
+      }} onError={(e) => e.target.style.display = 'none'} />
 
       {/* Floating Sparkles */}
       {sparkleData.map((s, i) => (
@@ -158,54 +152,78 @@ export default function SplashScreen({ onStart }) {
             position: 'absolute', fontSize: s.size, opacity: 0,
             top: s.top, left: s.left, right: s.right, bottom: s.bottom,
             pointerEvents: 'none', zIndex: 2,
-            filter: 'drop-shadow(0 0 6px rgba(255,200,220,0.5))',
+            filter: 'drop-shadow(0 0 8px rgba(212,163,89,0.6))',
           }}
         >{s.emoji}</span>
       ))}
 
-      {/* Center Text Content */}
+      {/* Main Exhibition Content */}
       <div style={{
         position: 'relative', zIndex: 3, textAlign: 'center',
-        padding: '0 30px', maxWidth: 340,
+        padding: '0 24px', maxWidth: 360,
       }}>
+        {/* VIP Admission Badge */}
+        <div ref={badgeRef} style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          padding: '7px 18px', borderRadius: 30, marginBottom: 20,
+          background: 'rgba(212, 163, 89, 0.15)', backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(212, 163, 89, 0.4)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+          opacity: 0,
+        }}>
+          <Crown size={15} color="var(--gold-accent)" />
+          <span style={{
+            fontFamily: 'var(--font-cute)', fontSize: '0.72rem', fontWeight: 700,
+            color: 'var(--gold-light)', letterSpacing: '1.5px', textTransform: 'uppercase',
+          }}>
+            VIP Museum Exhibition
+          </span>
+        </div>
+
+        {/* Subtitle */}
         <p ref={line1Ref} style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.9rem', fontWeight: 600,
-          color: 'rgba(255,240,245,0.8)', letterSpacing: '2px', textTransform: 'uppercase',
+          fontFamily: 'var(--font-cute)', fontSize: '0.85rem', fontWeight: 600,
+          color: 'rgba(255,244,247,0.85)', letterSpacing: '2px', textTransform: 'uppercase',
           marginBottom: 8, opacity: 0,
         }}>
-          Hai Wulan, ada sesuatu...
+          Special Birthday Exhibition For
         </p>
 
+        {/* Title: Nazwa Amelia */}
         <h1 ref={line2Ref} style={{
-          fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: '#fff',
-          lineHeight: 1.15, marginBottom: 10, opacity: 0,
-          textShadow: '0 4px 20px rgba(212,69,108,0.5)',
+          fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: '#fff',
+          lineHeight: 1.1, marginBottom: 12, opacity: 0,
+          textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          Happy Birthday, Wulan! 👑
+          Nazwa Amelia 👑
         </h1>
 
         <p ref={line3Ref} style={{
-          fontSize: '2rem', marginBottom: 36, opacity: 0,
+          fontFamily: 'var(--font-cute)', fontSize: '0.82rem',
+          color: 'var(--gold-light)', fontWeight: 600, marginBottom: 32, opacity: 0,
+          letterSpacing: '0.5px'
         }}>
-          🎂💕✨
+          The Museum of Us & Endless Memories ✨
         </p>
 
+        {/* Action Button */}
         <button
           ref={btnRef}
           onClick={handleStart}
           style={{
             opacity: 0, padding: '16px 36px', borderRadius: 60, border: 'none',
-            background: 'linear-gradient(135deg, var(--pink-deep), var(--pink-mid))',
-            color: '#fff', fontFamily: 'var(--font-cute)', fontSize: '1rem',
+            background: 'linear-gradient(135deg, var(--gold-accent) 0%, var(--pink-deep) 100%)',
+            color: '#fff', fontFamily: 'var(--font-cute)', fontSize: '0.98rem',
             fontWeight: 700, cursor: 'pointer', letterSpacing: '0.5px',
-            boxShadow: '0 8px 30px rgba(212,69,108,0.5), 0 0 60px rgba(212,69,108,0.2)',
-            transition: 'transform 0.2s ease',
+            boxShadow: '0 10px 32px rgba(212, 69, 108, 0.45), 0 0 20px rgba(212, 163, 89, 0.3)',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+            display: 'inline-flex', alignItems: 'center', gap: 8,
           }}
-          onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.95)'; }}
+          onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.96)'; }}
           onPointerUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
           onPointerLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
         >
-          Buka Sekarang 💌
+          Masuk Pameran 🏛️✨
         </button>
       </div>
     </div>

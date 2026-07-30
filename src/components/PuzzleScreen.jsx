@@ -21,17 +21,15 @@ export default function PuzzleScreen({ onComplete }) {
 
   const shuffle = () => {
     let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    // Fisher-Yates on first 8 elements, keep solvability check
     for (let i = 7; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    // Ensure solvable: count inversions (ignoring blank=8)
     let inv = 0;
     for (let i = 0; i < 9; i++)
       for (let j = i + 1; j < 9; j++)
         if (arr[i] !== 8 && arr[j] !== 8 && arr[i] > arr[j]) inv++;
-    if (inv % 2 !== 0) [arr[0], arr[1]] = [arr[1], arr[0]]; // fix parity
+    if (inv % 2 !== 0) [arr[0], arr[1]] = [arr[1], arr[0]];
     setTiles(arr);
     setMoves(0);
     setSolved(false);
@@ -55,7 +53,7 @@ export default function PuzzleScreen({ onComplete }) {
 
   const win = () => {
     setSolved(true);
-    confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 }, colors: ['#d4456c', '#f06292', '#f8a4be', '#e8d5f5', '#ffffff'] });
+    confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 }, colors: ['#c83b64', '#e85d88', '#f497b5', '#d4a359', '#ffffff'] });
     gsap.fromTo(gridRef.current, 
       { scale: 1 }, 
       { scale: 1.05, duration: 0.4, yoyo: true, repeat: 1, ease: 'power2.out' }
@@ -71,36 +69,36 @@ export default function PuzzleScreen({ onComplete }) {
     <div className="stage">
       <div ref={cardRef} style={{
         width: '100%', maxWidth: '380px', padding: '30px 24px', opacity: 0,
-        background: 'linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75))',
+        background: 'linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,245,248,0.85))',
         backdropFilter: 'blur(20px)', borderRadius: 32,
-        boxShadow: '0 20px 60px rgba(212,69,108,0.15), inset 0 0 0 1px rgba(255,255,255,0.5)',
+        boxShadow: '0 20px 60px rgba(45,16,30,0.15), inset 0 0 0 1px rgba(255,255,255,0.6)',
       }}>
         
-        {/* Elegant Header */}
-        <div style={{ textAlign: 'center', marginBottom: 24 }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 22 }}>
           <div style={{ 
             display: 'inline-flex', alignItems: 'center', gap: 6,
-            padding: '4px 12px', borderRadius: 20, background: 'rgba(212,69,108,0.08)',
-            color: 'var(--pink-deep)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: 1,
-            textTransform: 'uppercase', marginBottom: 12
+            padding: '4px 14px', borderRadius: 20, background: 'rgba(212,163,89,0.12)',
+            color: 'var(--gold-accent)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: 1,
+            textTransform: 'uppercase', marginBottom: 10
           }}>
-            <Puzzle size={12} /> Chapter II
+            <Puzzle size={12} /> Exhibition Vault
           </div>
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--berry)', 
             marginBottom: 6, lineHeight: 1.1
           }}>
-            Puzzle Kenangan
+            Puzzle Kenangan Nazwa
           </h2>
           <p style={{ 
             fontFamily: 'var(--font-cute)', fontSize: '0.85rem', color: 'var(--pink-deep)', 
-            fontWeight: 600, opacity: 0.85
+            fontWeight: 600, opacity: 0.9
           }}>
-            Susun foto kita untuk membuka suratnya 💕
+            Susun foto untuk membuka ruang pameran utama ✨
           </p>
         </div>
 
-        {/* Minimalist Stats Row */}
+        {/* Stats Row */}
         <div style={{ 
           display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
           marginBottom: 16, padding: '0 4px'
@@ -113,16 +111,16 @@ export default function PuzzleScreen({ onComplete }) {
             <button onClick={() => setPreview(true)} style={{
               width: 36, height: 36, borderRadius: '50%', background: '#fff',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: 'var(--pink-deep)', border: '1px solid rgba(212,69,108,0.15)',
-              boxShadow: '0 4px 12px rgba(212,69,108,0.05)', cursor: 'pointer', transition: 'transform 0.15s'
+              color: 'var(--pink-deep)', border: '1px solid rgba(212,163,89,0.25)',
+              boxShadow: '0 4px 12px rgba(45,16,30,0.06)', cursor: 'pointer', transition: 'transform 0.15s'
             }} onPointerDown={(e) => e.currentTarget.style.transform = 'scale(0.9)'} onPointerUp={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <Eye size={16} />
             </button>
             <button onClick={shuffle} style={{
               width: 36, height: 36, borderRadius: '50%', background: '#fff',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: 'var(--pink-deep)', border: '1px solid rgba(212,69,108,0.15)',
-              boxShadow: '0 4px 12px rgba(212,69,108,0.05)', cursor: 'pointer', transition: 'transform 0.15s'
+              color: 'var(--pink-deep)', border: '1px solid rgba(212,163,89,0.25)',
+              boxShadow: '0 4px 12px rgba(45,16,30,0.06)', cursor: 'pointer', transition: 'transform 0.15s'
             }} onPointerDown={(e) => e.currentTarget.style.transform = 'scale(0.9)'} onPointerUp={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <RotateCcw size={16} />
             </button>
@@ -133,9 +131,9 @@ export default function PuzzleScreen({ onComplete }) {
         <div ref={gridRef} style={{
           width: '100%', aspectRatio: '1', display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)', gap: 3,
-          background: 'rgba(212,69,108,0.04)', padding: 6, borderRadius: 24,
-          boxShadow: 'inset 0 4px 12px rgba(212,69,108,0.05), 0 8px 24px rgba(212,69,108,0.08)',
-          position: 'relative', marginBottom: 28, overflow: 'hidden',
+          background: 'rgba(212,163,89,0.08)', padding: 6, borderRadius: 24,
+          boxShadow: 'inset 0 4px 12px rgba(45,16,30,0.06), 0 8px 24px rgba(45,16,30,0.08)',
+          position: 'relative', marginBottom: 26, overflow: 'hidden',
         }}>
           {tiles.map((val, i) => {
             const empty = val === 8 && !solved;
@@ -157,16 +155,15 @@ export default function PuzzleScreen({ onComplete }) {
                   <div style={{
                     width: '300%', height: '300%', position: 'absolute', 
                     top: `${-srcRow * 100}%`, left: `${-srcCol * 100}%`,
-                    backgroundImage: 'url(/gambar%201.jpeg)', backgroundSize: 'cover',
+                    backgroundImage: 'url(/gambar%2025.jpeg)', backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }} />
                 )}
-                {/* Elegant Number Badges */}
                 {!empty && !solved && (
                   <span style={{
                     position: 'absolute', top: 4, left: 4, 
                     width: 20, height: 20, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(4px)',
+                    background: 'rgba(255,255,255,0.88)', backdropFilter: 'blur(4px)',
                     color: 'var(--pink-deep)', borderRadius: '50%',
                     fontSize: '0.65rem', fontWeight: 800, fontFamily: 'var(--font-display)',
                     boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
@@ -176,25 +173,25 @@ export default function PuzzleScreen({ onComplete }) {
             );
           })}
 
-          {/* Elegant Preview Overlay */}
+          {/* Preview Overlay */}
           {preview && (
             <div onClick={() => setPreview(false)} style={{
-              position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.92)',
+              position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.94)',
               backdropFilter: 'blur(12px)', borderRadius: 24, zIndex: 10, 
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', 
               padding: 20, cursor: 'pointer',
             }}>
               <div style={{
                 width: '85%', aspectRatio: '1', borderRadius: 16, overflow: 'hidden',
-                boxShadow: '0 12px 32px rgba(212,69,108,0.2)', marginBottom: 16
+                boxShadow: '0 12px 32px rgba(212,69,108,0.25)', marginBottom: 16
               }}>
-                <img src="/gambar 1.jpeg" alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/gambar 25.jpeg" alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span style={{ 
                 color: 'var(--pink-deep)', fontSize: '0.75rem', fontWeight: 700,
                 textTransform: 'uppercase', letterSpacing: 1, background: 'rgba(212,69,108,0.08)',
                 padding: '8px 16px', borderRadius: 20
-              }}>Tap untuk menutup</span>
+              }}>Ketuk untuk menutup</span>
             </div>
           )}
         </div>
@@ -206,10 +203,10 @@ export default function PuzzleScreen({ onComplete }) {
               color: 'var(--pink-deep)', fontWeight: 800, fontSize: '1rem', fontFamily: 'var(--font-display)',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginBottom: 16,
             }}>
-              <CheckCircle2 size={18} /> YAY! PUZZLE BERHASIL 🎉
+              <CheckCircle2 size={18} /> PUZZLE BERHASIL DISUSUN! 🎉
             </div>
             <button className="btn-primary" onClick={onComplete} style={{ width: '100%' }}>
-              Buka Surat Spesial <ArrowRight size={16} />
+              Buka Dedikasi Spesial <ArrowRight size={16} />
             </button>
           </div>
         ) : (
@@ -217,7 +214,7 @@ export default function PuzzleScreen({ onComplete }) {
             width: '100%', background: 'rgba(212,69,108,0.04)', borderRadius: 16, 
             padding: '12px', fontSize: '0.85rem'
           }}>
-            Terlalu susah? <span style={{ textDecoration: 'underline' }}>Lewati Puzzle</span>
+            Lewati Puzzle & Lanjut
           </button>
         )}
       </div>

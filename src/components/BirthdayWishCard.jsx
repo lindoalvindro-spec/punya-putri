@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Download, RotateCcw, Sparkles } from 'lucide-react';
+import { Download, RotateCcw, Sparkles, Crown } from 'lucide-react';
 import gsap from 'gsap';
 import confetti from 'canvas-confetti';
 
@@ -10,27 +10,24 @@ export default function BirthdayWishCard({ onRestart }) {
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.2 });
     
-    // Main card entry (slow slide up and elegant fade)
     tl.fromTo(cardRef.current,
       { opacity: 0, y: 50, rotation: 2 },
       { opacity: 1, y: 0, rotation: 0, duration: 1, ease: 'power3.out' }
     );
     
-    // Staggered reveal of internal content
     tl.fromTo('.reveal-el', 
       { opacity: 0, y: 15 },
       { opacity: 1, y: 0, stagger: 0.12, duration: 0.8, ease: 'power2.out' },
       "-=0.4"
     );
 
-    // Subtle glowing frame pulse
     tl.fromTo(frameRef.current,
-      { boxShadow: '0 10px 30px rgba(212,69,108,0.05)' },
-      { boxShadow: '0 20px 50px rgba(212,69,108,0.15)', duration: 2.5, ease: 'sine.inOut', yoyo: true, repeat: -1 },
+      { boxShadow: '0 10px 30px rgba(212,163,89,0.1)' },
+      { boxShadow: '0 20px 50px rgba(200,59,100,0.2)', duration: 2.5, ease: 'sine.inOut', yoyo: true, repeat: -1 },
       0.5
     );
 
-    // Floating animations for decorations
+    // Floating animation for decorative stickers & butterflies
     gsap.to('.float-el', {
       y: -8,
       rotation: 3,
@@ -40,14 +37,13 @@ export default function BirthdayWishCard({ onRestart }) {
       repeat: -1
     });
 
-    // Confetti pop
     setTimeout(() => {
       confetti({
-        particleCount: 80, spread: 100, origin: { y: 0.55 },
-        colors: ['#d4456c', '#f06292', '#f8a4be', '#ffffff', '#ffd700'],
+        particleCount: 100, spread: 100, origin: { y: 0.55 },
+        colors: ['#c83b64', '#e85d88', '#f497b5', '#d4a359', '#ffffff'],
         gravity: 0.7, scalar: 0.9,
       });
-    }, 1000);
+    }, 800);
   }, []);
 
   return (
@@ -55,101 +51,111 @@ export default function BirthdayWishCard({ onRestart }) {
       <div ref={cardRef} style={{
         width: '100%', maxWidth: 380, opacity: 0, position: 'relative',
       }}>
-        {/* Main Elegant Card Frame */}
+        {/* Main Card Frame */}
         <div ref={frameRef} style={{
-          background: 'linear-gradient(135deg, #ffffff 0%, #fcf7f9 100%)',
-          borderRadius: 24, padding: '14px',
-          border: '1px solid rgba(212,69,108,0.1)',
-          position: 'relative', marginBottom: 24
+          background: 'linear-gradient(135deg, #ffffff 0%, #fffbf8 100%)',
+          borderRadius: 28, padding: '14px',
+          border: '1.5px solid var(--glass-border)',
+          position: 'relative', marginBottom: 24,
+          boxShadow: '0 16px 48px rgba(45,16,30,0.12)'
         }}>
-          {/* Inner Border (Classic Invitation Style) */}
+          {/* Inner Invitation Border */}
           <div style={{
-            border: '1px solid rgba(212,69,108,0.15)', borderRadius: 16,
-            padding: '36px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden'
+            border: '1px solid rgba(212,163,89,0.3)', borderRadius: 20,
+            padding: '36px 22px', textAlign: 'center', position: 'relative', overflow: 'hidden',
+            background: 'radial-gradient(circle at top, #fffdfa 0%, #fff5f8 100%)'
           }}>
-            
-            {/* Cute Cat Decor (Top Left Corner) */}
+
+            {/* Cute Cat Decor Sticker (Top Left Corner) */}
             <img src="/lucu1 no bg.png" alt="Cute Decor" className="float-el reveal-el" style={{
               position: 'absolute', top: 10, left: 10, width: 75,
-              opacity: 0.95, pointerEvents: 'none', zIndex: 10
+              opacity: 0.95, pointerEvents: 'none', zIndex: 10,
+              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))'
             }} onError={(e) => e.target.style.display = 'none'} />
 
-            {/* 3 Hearts Decor (Top Right Corner) */}
+            {/* Pink Hearts Cluster (Top Right Corner) */}
             <img src="/gambar 13 no bg 1.png" alt="Hearts" className="reveal-el" style={{
               position: 'absolute', top: 10, right: 10, width: 75,
-              opacity: 0.9, pointerEvents: 'none', zIndex: 10
+              opacity: 0.9, pointerEvents: 'none', zIndex: 10,
+              filter: 'drop-shadow(0 4px 8px rgba(212,69,108,0.2))'
             }} onError={(e) => e.target.style.display = 'none'} />
 
-            {/* Top Decoration */}
-            <div className="reveal-el" style={{ marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
-              <Sparkles size={20} color="var(--gold-accent)" />
+            {/* Top Crown & Sparkles Decoration */}
+            <div className="reveal-el" style={{ marginBottom: 14, display: 'flex', justifyContent: 'center' }}>
+              <div style={{
+                width: 44, height: 44, borderRadius: '50%', background: 'rgba(212,163,89,0.12)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(212,163,89,0.3)'
+              }}>
+                <Crown size={22} color="var(--gold-accent)" />
+              </div>
             </div>
 
-            {/* Circular Photo Container with Left & Right Butterfly Decorations */}
+            {/* Circular Photo Frame with Left & Right Butterflies */}
             <div className="reveal-el" style={{ 
               position: 'relative', width: 150, height: 150, margin: '0 auto 20px' 
             }}>
               {/* Left Butterflies Cluster */}
               <img src="/gambar 12 no bg.png" alt="Left Butterflies" className="float-el" style={{
                 position: 'absolute', top: 25, left: -35, width: 60,
-                zIndex: 5, pointerEvents: 'none'
+                zIndex: 5, pointerEvents: 'none', filter: 'drop-shadow(0 4px 10px rgba(212,69,108,0.3))'
               }} onError={(e) => e.target.style.display = 'none'} />
 
               {/* Right Butterflies Cluster */}
               <img src="/gambar 12 no bg.png" alt="Right Butterflies" className="float-el" style={{
                 position: 'absolute', top: 80, right: -45, width: 55,
-                zIndex: 2, pointerEvents: 'none', transform: 'scaleX(-1)'
+                zIndex: 5, pointerEvents: 'none', transform: 'scaleX(-1)',
+                filter: 'drop-shadow(0 4px 10px rgba(212,69,108,0.3))'
               }} onError={(e) => e.target.style.display = 'none'} />
 
               <div style={{
                 width: 150, height: 150, borderRadius: '50%',
                 overflow: 'hidden', border: '4px solid #fff',
-                boxShadow: '0 12px 32px rgba(212,69,108,0.15)',
+                boxShadow: '0 12px 32px rgba(200,59,100,0.25)',
                 position: 'relative', zIndex: 1
               }}>
-                <img src="/gambar 3.jpeg" alt="Wulan" style={{
+                <img src="/gambar 22.jpeg" alt="Nazwa Amelia" style={{
                   width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'
-                }} onError={(e) => { e.target.src = '/bestie2.jpg'; }} />
+                }} onError={(e) => { e.target.src = '/gambar 21.jpeg'; }} />
               </div>
             </div>
 
-            {/* Typography Section */}
+            {/* Typography */}
             <h3 className="reveal-el" style={{
-              fontFamily: 'var(--font-cute)', fontSize: '0.85rem', color: 'var(--rose-gold)',
+              fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: 'var(--rose-gold)',
               letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 4, fontWeight: 700
             }}>
-              Happy 19th Birthday
+              Official Museum Souvenir
             </h3>
             
-            <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 24 }}>
+            <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 18 }}>
               <h1 style={{
-                fontFamily: 'var(--font-display)', fontSize: '2.8rem', color: 'var(--berry)',
+                fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                Wulan
+                Nazwa Amelia
               </h1>
             </div>
 
-            {/* Delicate Divider */}
+            {/* Gold Accent Divider */}
             <div className="reveal-el" style={{
-              width: 50, height: 1, background: 'var(--pink-deep)', margin: '0 auto 24px', opacity: 0.25
+              width: 50, height: 1.5, background: 'var(--gold-accent)', margin: '0 auto 20px', opacity: 0.6
             }} />
 
-            {/* Core Message */}
+            {/* Message */}
             <p className="reveal-el" style={{
-              fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: 'var(--berry-light)',
-              lineHeight: 1.7, marginBottom: 30, fontStyle: 'italic', padding: '0 10px'
+              fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry-light)',
+              lineHeight: 1.7, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
             }}>
-              "Wulan, terima kasih sudah menjadi alasan terindah di setiap hariku. Semoga di tahun ini, kamu menemukan semua kebahagiaan yang selama ini kamu berikan kepada orang lain."
+              "I hope you'll stay till old age, bakal bisa lebih bahagia, lebih aktif, lebih fresh to a new year. Always take care, stay safe, stay happy, stay healthy. May you have the biggest smile plastered specially today!"
             </p>
 
             {/* Sign Off */}
             <div className="reveal-el" style={{ marginBottom: 10 }}>
-              <p style={{ fontSize: '0.75rem', color: 'var(--rose-gold)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>
-                With all my love
+              <p style={{ fontSize: '0.72rem', color: 'var(--rose-gold)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 1.2, fontWeight: 700 }}>
+                Warmest Wishes & Friendship
               </p>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--pink-deep)' }}>
-                dengan cinta, selalu 🤍
+              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
+                Happy Birthday, Nazwa! 🌸
               </p>
             </div>
 
@@ -162,17 +168,17 @@ export default function BirthdayWishCard({ onRestart }) {
           alignItems: 'center', gap: 12, paddingBottom: 20
         }}>
           <p style={{
-            fontSize: '0.75rem', color: 'var(--rose-gold)', fontWeight: 600,
+            fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
             display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            <Download size={14} /> Screenshot kartu ini & simpan ya!
+            <Download size={14} /> Screenshot kartu ini untuk disimpan ya! 📸
           </p>
 
           <button className="btn-ghost" onClick={onRestart} style={{ 
-            marginTop: 4, padding: '10px 20px', background: 'rgba(255,255,255,0.6)',
+            marginTop: 4, padding: '10px 20px', background: 'rgba(255,255,255,0.7)',
             borderRadius: 20, color: 'var(--berry)'
           }}>
-            <RotateCcw size={14} /> Ulangi Kejutan dari Awal
+            <RotateCcw size={14} /> Ulangi Kejutan Pameran
           </button>
         </div>
       </div>

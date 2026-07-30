@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Lock, Sparkles, AlertCircle } from 'lucide-react';
+import { Lock, Sparkles, AlertCircle, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
 
 export default function PinScreen({ onUnlock }) {
   const [pin, setPin] = useState('');
   const [error, setError] = useState(false);
-  const correctPin = '310707';
+  const correctPin = '120705';
   const cardRef = useRef(null);
   const dotsRef = useRef([]);
   const lockRef = useRef(null);
@@ -18,7 +18,7 @@ export default function PinScreen({ onUnlock }) {
     );
     tl.fromTo(lockRef.current,
       { scale: 0, rotation: -180 },
-      { scale: 1, rotation: 0, duration: 0.5, ease: 'back.out(2)' },
+      { scale: 1, rotation: 0, duration: 0.55, ease: 'back.out(2)' },
       '-=0.3'
     );
   }, []);
@@ -64,32 +64,33 @@ export default function PinScreen({ onUnlock }) {
   return (
     <div className="stage">
       <div ref={cardRef} className="glass" style={{
-        width: '100%', maxWidth: '340px', padding: '32px 22px', opacity: 0,
+        width: '100%', maxWidth: '350px', padding: '34px 22px', opacity: 0,
+        border: '1.5px solid var(--glass-border)',
       }}>
         {/* Lock Icon */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 18 }}>
           <div ref={lockRef} style={{
-            width: 60, height: 60, borderRadius: '50%',
-            background: 'linear-gradient(145deg, var(--pink-deep), var(--pink-mid))',
+            width: 62, height: 62, borderRadius: '50%',
+            background: 'linear-gradient(145deg, var(--gold-accent), var(--pink-deep))',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 8px 28px rgba(212,69,108,0.35)', color: '#fff',
+            boxShadow: '0 8px 28px var(--gold-shadow)', color: '#fff',
           }}>
-            <Lock size={26} strokeWidth={2.5} />
+            <Lock size={26} strokeWidth={2.3} />
           </div>
         </div>
 
         {/* Title */}
         <h1 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.6rem', color: 'var(--berry)',
+          fontFamily: 'var(--font-display)', fontSize: '1.75rem', color: 'var(--berry)',
           textAlign: 'center', lineHeight: 1.2, marginBottom: 4,
         }}>
-          Secret Gate for Wulan ✨
+          VIP Pass Verification ✨
         </h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)',
-          textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.85,
+          textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.9,
         }}>
-          Masukkan PIN tanggal lahir Wulan 💕
+          Masukkan PIN tanggal lahir Nazwa Amelia 💕
         </p>
 
         {/* PIN Dots */}
@@ -101,13 +102,13 @@ export default function PinScreen({ onUnlock }) {
                 width: 38, height: 38, borderRadius: 12,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 background: filled
-                  ? 'linear-gradient(135deg, var(--pink-deep), var(--pink-mid))'
-                  : 'rgba(255,255,255,0.6)',
+                  ? 'linear-gradient(135deg, var(--gold-accent), var(--pink-deep))'
+                  : 'rgba(255,255,255,0.7)',
                 border: filled ? 'none' : '2px dashed var(--pink-soft)',
-                boxShadow: filled ? '0 4px 16px rgba(212,69,108,0.3)' : 'none',
-                transition: 'background 0.15s, border 0.15s, box-shadow 0.15s',
+                boxShadow: filled ? '0 4px 16px var(--gold-shadow)' : 'none',
+                transition: 'all 0.2s ease',
               }}>
-                {filled && <img src="/gambar 11 no bg benar.png" alt="*" style={{ width: 24, height: 24, objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }} />}
+                {filled && <Sparkles size={18} color="#fff" />}
               </div>
             );
           })}
@@ -116,10 +117,10 @@ export default function PinScreen({ onUnlock }) {
         {/* Error */}
         {error && (
           <div style={{
-            background: 'rgba(212,69,108,0.1)', color: 'var(--pink-deep)',
+            background: 'rgba(212,69,108,0.12)', color: 'var(--pink-deep)',
             padding: '8px 14px', borderRadius: 14, fontSize: '0.78rem', fontWeight: 600,
             marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-            border: '1px solid rgba(212,69,108,0.2)',
+            border: '1px solid rgba(212,69,108,0.25)',
           }}>
             <AlertCircle size={14} /> PIN salah, coba lagi ya!
           </div>
@@ -128,7 +129,7 @@ export default function PinScreen({ onUnlock }) {
         {/* Keypad */}
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 8, marginBottom: 18,
+          gap: 8, marginBottom: 12,
         }}>
           {keys.map((k) => {
             const isAction = k === 'C' || k === '⌫';
@@ -140,16 +141,16 @@ export default function PinScreen({ onUnlock }) {
               }}
               style={{
                 height: 52, borderRadius: 14,
-                border: isAction ? 'none' : '1px solid var(--glass-border)',
-                background: isAction ? 'rgba(248,164,190,0.2)' : 'rgba(255,255,255,0.75)',
+                border: isAction ? 'none' : '1px solid rgba(212,163,89,0.3)',
+                background: isAction ? 'rgba(248,164,190,0.2)' : 'rgba(255,255,255,0.85)',
                 color: isAction ? 'var(--pink-deep)' : 'var(--berry)',
                 fontFamily: 'var(--font-cute)',
                 fontSize: isAction ? '0.8rem' : '1.15rem',
                 fontWeight: 700, cursor: 'pointer',
-                boxShadow: isAction ? 'none' : '0 2px 8px rgba(212,69,108,0.08)',
+                boxShadow: isAction ? 'none' : '0 3px 10px rgba(45,16,30,0.06)',
                 transition: 'transform 0.1s, background 0.15s',
               }}
-              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.92)'; }}
+              onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}
               onPointerUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
               onPointerLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
               >
@@ -158,8 +159,6 @@ export default function PinScreen({ onUnlock }) {
             );
           })}
         </div>
-
-
       </div>
     </div>
   );

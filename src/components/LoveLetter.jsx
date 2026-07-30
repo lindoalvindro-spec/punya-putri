@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Heart, ArrowRight, Sparkles } from 'lucide-react';
+import { Heart, ArrowRight, Sparkles, Quote } from 'lucide-react';
 import gsap from 'gsap';
 
-// ─── 💌 Tab 1: Surat Content ───
+// ─── 💌 Tab 1: Surat Content (High-End Aesthetic Letter) ───
 function LetterTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -15,71 +15,121 @@ function LetterTab() {
     );
     tl.fromTo(itemsRef.current.filter(Boolean),
       { opacity: 0, y: 12 },
-      { opacity: 1, y: 0, stagger: 0.1, duration: 0.45, ease: 'power2.out' },
+      { opacity: 1, y: 0, stagger: 0.08, duration: 0.45, ease: 'power2.out' },
       "-=0.2"
     );
   }, []);
 
   return (
     <div ref={containerRef} style={{
-      background: 'var(--pink-whisper)', padding: '20px 16px', borderRadius: 20,
-      border: '1px solid rgba(212,69,108,0.12)', lineHeight: 1.7,
-      fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--berry)',
-      maxHeight: '45vh', overflowY: 'auto',
-      boxShadow: '0 8px 32px rgba(212,69,108,0.06), inset 0 0 20px rgba(255,255,255,0.7)',
+      background: 'linear-gradient(170deg, #fffdfb 0%, #fff4f7 100%)',
+      padding: '22px 18px', borderRadius: 24,
+      border: '1.5px solid rgba(212,163,89,0.3)', lineHeight: 1.8,
+      fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry)',
+      maxHeight: '50vh', overflowY: 'auto',
+      boxShadow: '0 12px 36px rgba(45,16,30,0.08), inset 0 0 25px rgba(255,255,255,0.9)',
+      position: 'relative',
     }}>
-      {/* Photo inside letter */}
+      {/* Tilted Polaroid Photo with Decorative Tape */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
-        float: 'right', width: 85, height: 85, marginLeft: 12, marginBottom: 8,
-        borderRadius: 14, overflow: 'hidden', border: '3px solid #fff',
-        boxShadow: '0 4px 14px rgba(212,69,108,0.15)',
-        transform: 'rotate(3deg)',
+        float: 'right', width: 96, height: 96, marginLeft: 14, marginBottom: 10,
+        borderRadius: 16, overflow: 'hidden', border: '4px solid #ffffff',
+        boxShadow: '0 8px 24px rgba(45,16,30,0.18)',
+        transform: 'rotate(4deg)', position: 'relative',
       }}>
-        <img src="/gambar 2.jpeg" alt="Us" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          onError={(e) => { e.target.src = '/bestie1.jpg'; }} />
+        {/* Subtle Washi Tape Ornament */}
+        <div style={{
+          position: 'absolute', top: -6, left: '50%', transform: 'translateX(-50%)',
+          width: 36, height: 12, background: 'rgba(212,163,89,0.35)',
+          borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
+        }} />
+        <img src="/gambar 21.jpeg" alt="Nazwa Amelia" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={(e) => { e.target.src = '/gambar 22.jpeg'; }} />
       </div>
 
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14 }}>
-        <b>Selamat ulang tahun, Wulan.</b>
+      {/* Opening Greeting Header */}
+      <div ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14 }}>
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          padding: '4px 12px', borderRadius: 20,
+          background: 'linear-gradient(135deg, rgba(200,59,100,0.1), rgba(212,163,89,0.15))',
+          border: '1px solid rgba(200,59,100,0.2)', marginBottom: 6
+        }}>
+          <Sparkles size={13} color="var(--pink-deep)" />
+          <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: 'var(--pink-deep)' }}>
+            SELAMAT ULANG TAHUN!! 🎉✨
+          </span>
+        </div>
+      </div>
+
+      {/* Paragraph 1 */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
+        Ihhh udah tua nihh :( Setiap tahun berlalu cepet banget yaa. Tapi kamu keren banget deh, masih bisa bertahan disini ngerayain ultah kamu yang ke sekian! Aku bangga sama kamuuu. 💕
       </p>
 
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14 }}>
-        Aku tidak pandai merangkai kata, tapi aku ingin kamu tahu —
-        kehadiranmu di hidupku adalah hal terbaik yang pernah terjadi.
-        Setiap hari bersamamu terasa lebih bermakna dari yang bisa aku jelaskan.
+      {/* Paragraph 2 */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18 }}>
+        For the wishes, I hope you'll stay till old age, bakal bisa lebih bahagia, lebih aktif, lebih fresh to a new year. Jadi lebih deket to success, bisa bikin orang terdekat kamu bangga! ✨
       </p>
 
-      <p ref={(el) => itemsRef.current.push(el)} style={{
-        marginBottom: 20,
-        fontFamily: 'var(--font-display)',
-        fontSize: '1.15rem',
-        fontStyle: 'italic',
-        color: 'var(--berry)',
-        lineHeight: 1.6,
-        textAlign: 'center',
-        padding: '10px 0',
-        letterSpacing: '0.01em',
+      {/* 🌟 Elegant Organic Quote Card (Anti-AI-Slop Redesign) */}
+      <div ref={(el) => itemsRef.current.push(el)} style={{
+        margin: '20px 0',
+        padding: '18px 18px',
+        borderRadius: 20,
+        background: 'linear-gradient(135deg, rgba(255, 245, 248, 0.95) 0%, rgba(255, 250, 242, 0.95) 100%)',
+        border: '1px solid rgba(244, 151, 181, 0.35)',
+        boxShadow: '0 8px 24px rgba(200,59,100,0.06), inset 0 0 15px rgba(255,255,255,0.8)',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        "Kamu bukan cuma seseorang di hidupku. Kamu adalah alasan kenapa aku ingin jadi versi terbaik dari diriku."
+        {/* Ambient Glow Accent */}
+        <div style={{
+          position: 'absolute', top: -20, right: -20, width: 80, height: 80,
+          borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,163,89,0.2) 0%, transparent 70%)',
+          pointerEvents: 'none'
+        }} />
+
+        <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+          <Quote size={22} color="var(--pink-deep)" style={{ transform: 'rotate(180deg)', flexShrink: 0, marginTop: 2, opacity: 0.8 }} />
+          <p style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '0.85rem',
+            fontStyle: 'italic',
+            color: 'var(--berry)',
+            lineHeight: 1.7,
+            fontWeight: 500,
+          }}>
+            Tapi first thing first yang paling penting, diri kamu sendiri. Kamu harus bisa ngadepin tanggung jawab yang jauh lebih besar setiap tahunnya. Harus bisa menghadapi rintangan lain yang bakal ada di depan kamu, menerima diri kamu far before everyone else does. Karena, kamu harus lebih nyaman sama diri kamu sekarang!
+          </p>
+        </div>
+      </div>
+
+      {/* Paragraph 3 */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
+        You'll face more years to come, meaning more challenges and surprise along! Dengan hadiahnya juga disana. Always take care, stay safe, stay happy, stay healthy. 💖
       </p>
 
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14 }}>
-        Semoga di tahun ini kamu mendapatkan semua kebahagiaan yang kamu layak terima.
-        Dan aku berjanji, aku akan selalu ada — di hari-hari indah maupun di hari-hari yang berat.
-      </p>
-
-      <p ref={(el) => itemsRef.current.push(el)} style={{
-        textAlign: 'right', fontWeight: 600, color: 'var(--pink-deep)',
-        marginTop: 20, fontSize: '0.88rem', clear: 'both',
+      {/* Handwritten Sign-Off Card */}
+      <div ref={(el) => itemsRef.current.push(el)} style={{
+        marginTop: 22, padding: '14px 16px',
+        background: 'linear-gradient(135deg, #ffffff 0%, #fff7f9 100%)',
+        borderRadius: 18, border: '1.5px solid rgba(212,163,89,0.25)',
+        textAlign: 'center', boxShadow: '0 4px 16px rgba(45,16,30,0.05)',
+        clear: 'both',
       }}>
-        Selalu mencintaimu,<br />
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem' }}>— kekasihmu 🌹</span>
-      </p>
+        <p style={{
+          fontFamily: 'var(--font-display)', fontSize: '1.25rem', color: 'var(--pink-deep)',
+          lineHeight: 1.3, margin: 0
+        }}>
+          Happy birthday, again. May you have the biggest smile plastered specially today! 😊🌸✨
+        </p>
+      </div>
     </div>
   );
 }
 
-// ─── ✨ Tab 2: Impian Bersama Content ───
+// ─── ✨ Tab 2: Impian & Harapan Content ───
 function ImpianTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -100,44 +150,51 @@ function ImpianTab() {
   const dreams = [
     {
       icon: '🌱',
-      badge: 'IMPIAN 01',
-      title: 'Tumbuh Bersama',
-      text: 'Aku ingin kita terus melangkah dan belajar bersama. Melewati setiap proses hidup, merayakan setiap pencapaian kecil, dan saling mendukung di setiap keadaan.',
-      gradient: 'linear-gradient(135deg, rgba(212,69,108,0.12), rgba(232,213,245,0.25))',
+      badge: 'HARAPAN 01',
+      title: 'Stay Fresh & Happy',
+      text: 'I hope you\'ll stay till old age, bakal bisa lebih bahagia, lebih aktif, dan selalu fresh menyambut setiap tahun yang baru.',
+      gradient: 'linear-gradient(135deg, rgba(212,163,89,0.18), rgba(248,164,190,0.25))',
     },
     {
       icon: '🌅',
-      badge: 'IMPIAN 02',
-      title: 'Banyak Kenangan Baru',
-      text: 'Aku ingin mendatangi tempat-tempat baru bersamamu, mengabadikan lebih banyak momen indah, dan tertawa lepas tanpa beban di sampingmu.',
-      gradient: 'linear-gradient(135deg, rgba(248,164,190,0.15), rgba(255,232,238,0.3))',
+      badge: 'HARAPAN 02',
+      title: 'Diri Kamu Sendiri & Kenyamanan',
+      text: 'Menerima diri kamu far before everyone else does, karena kamu harus lebih nyaman sama diri kamu sekarang!',
+      gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
-      icon: '🏡',
-      badge: 'IMPIAN 03',
-      title: 'Rumah Tempat Kembali',
-      text: 'Aku ingin selalu menjadi tempat terbaikmu untuk pulang. Apapun yang terjadi di luar sana, aku ingin kamu selalu merasa aman dan tenang bersamaku.',
-      gradient: 'linear-gradient(135deg, rgba(212,69,108,0.1), rgba(255,245,248,0.4))',
+      icon: '✨',
+      badge: 'HARAPAN 03',
+      title: 'Success & Big Smile',
+      text: 'Jadi lebih deket to success, bikin orang terdekat bangga, and may you have the biggest smile plastered specially today!',
+      gradient: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(255,245,248,0.4))',
+    },
+    {
+      icon: '💍',
+      badge: 'HARAPAN 04 (SPESIAL)',
+      title: 'Dipertemukan Pasangan Terbaik ✨',
+      text: 'Semoga di tahun ini segera dipertemukan dengan jodoh & pasangan terbaik yang siap menemani hari-harimu (biar gak single lama-lama lagi wkwk)! 💖',
+      gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
 
   return (
     <div ref={containerRef} style={{
       background: 'linear-gradient(150deg, #ffffff 0%, var(--pink-whisper) 100%)',
-      borderRadius: 22, border: '1px solid rgba(212,69,108,0.15)',
+      borderRadius: 22, border: '1px solid rgba(212,163,89,0.2)',
       padding: '22px 18px', display: 'flex', flexDirection: 'column', gap: 14,
-      boxShadow: '0 10px 32px rgba(212,69,108,0.08), inset 0 0 20px rgba(255,255,255,0.7)',
+      boxShadow: '0 10px 32px rgba(45,16,30,0.08), inset 0 0 20px rgba(255,255,255,0.7)',
     }}>
       <div style={{ textAlign: 'center', marginBottom: 4 }}>
         <Sparkles size={20} color="var(--gold-accent)" style={{ marginBottom: 4 }} />
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Impian Bersama 💫</h4>
+        }}>Harapan Utama 💫</h4>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)',
           fontWeight: 600, marginTop: 2
-        }}>3 harapan sederhana untuk melangkah denganku</p>
+        }}>Poin doa istimewa untuk perjalanan Nazwa</p>
       </div>
 
       {dreams.map((item, i) => (
@@ -148,32 +205,24 @@ function ImpianTab() {
             background: '#ffffff',
             borderRadius: 18,
             padding: '16px 16px',
-            border: '1.5px solid rgba(212,69,108,0.12)',
-            boxShadow: '0 4px 18px rgba(212,69,108,0.06)',
+            border: '1.5px solid rgba(212,163,89,0.18)',
+            boxShadow: '0 4px 18px rgba(45,16,30,0.06)',
             position: 'relative',
             overflow: 'hidden',
-            transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+            transition: 'transform 0.2s ease',
             cursor: 'pointer',
           }}
           onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.97)'; }}
           onPointerUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
           onPointerLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
         >
-          {/* Subtle Accent Glow */}
-          <div style={{
-            position: 'absolute', top: -15, right: -15, width: 70, height: 70,
-            borderRadius: '50%', background: item.gradient, filter: 'blur(10px)',
-            pointerEvents: 'none',
-          }} />
-
           <div style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-            {/* Animated Icon Badge */}
             <div style={{
               width: 44, height: 44, flexShrink: 0, borderRadius: 14,
               background: item.gradient,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              border: '1px solid rgba(212,69,108,0.2)', fontSize: '1.3rem',
-              boxShadow: '0 4px 12px rgba(212,69,108,0.12)'
+              border: '1px solid rgba(212,163,89,0.3)', fontSize: '1.3rem',
+              boxShadow: '0 4px 12px rgba(45,16,30,0.08)'
             }}>
               {item.icon}
             </div>
@@ -181,7 +230,7 @@ function ImpianTab() {
             <div style={{ flex: 1 }}>
               <div style={{
                 fontSize: '0.62rem', fontWeight: 800, textTransform: 'uppercase',
-                letterSpacing: 1.2, color: 'var(--pink-deep)', opacity: 0.8,
+                letterSpacing: 1.2, color: 'var(--pink-deep)', opacity: 0.85,
                 marginBottom: 2
               }}>
                 {item.badge}
@@ -201,7 +250,7 @@ function ImpianTab() {
   );
 }
 
-// ─── 🎁 Tab 3: Doa & Harapan Content ───
+// ─── 🎁 Tab 3: Doa & Pesan Warm Wishes ───
 function WishesTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -223,54 +272,34 @@ function WishesTab() {
     <div ref={containerRef} style={{
       background: 'linear-gradient(145deg, #ffffff, var(--pink-whisper))',
       padding: '24px 20px', borderRadius: 20,
-      border: '1px solid rgba(212,69,108,0.15)',
-      boxShadow: '0 8px 32px rgba(212,69,108,0.08), inset 0 0 20px rgba(255,255,255,0.7)',
+      border: '1px solid rgba(212,163,89,0.2)',
+      boxShadow: '0 8px 32px rgba(45,16,30,0.08), inset 0 0 20px rgba(255,255,255,0.7)',
     }}>
       <div style={{ textAlign: 'center', marginBottom: 20 }}>
         <Sparkles size={20} color="var(--gold-accent)" style={{ marginBottom: 6 }} />
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Harapan Untukmu ✨</h4>
-      </div>
-
-      {/* Main Quote */}
-      <div ref={(el) => itemsRef.current.push(el)} style={{
-        position: 'relative', padding: '16px 20px', borderRadius: 16, marginBottom: 20,
-        background: 'rgba(212,69,108,0.03)', border: '1px dashed rgba(212,69,108,0.2)',
-        textAlign: 'center',
-      }}>
-        <span style={{
-          position: 'absolute', top: -10, left: 16, fontSize: '1.5rem', 
-          color: 'var(--pink-soft)', fontFamily: 'serif', lineHeight: 1
-        }}>“</span>
-        <p style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.95rem',
-          color: 'var(--berry)', lineHeight: 1.6, fontWeight: 600, fontStyle: 'italic'
-        }}>
-          Semoga setiap langkahmu selalu dipenuhi kebahagiaan, dan aku bersyukur bisa menjadi bagian dari perjalanan hidupmu.
-        </p>
-        <span style={{
-          position: 'absolute', bottom: -20, right: 16, fontSize: '1.5rem', 
-          color: 'var(--pink-soft)', fontFamily: 'serif', lineHeight: 1
-        }}>”</span>
+        }}>Special Birthday Wishes ✨</h4>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span>Semoga di usia yang baru ini, kamu <b>makin bahagia</b> dan makin bersinar dari dalam 🤍</span>,
-          <span>Tetap jadi <b>Wulan yang selalu bikin aku jatuh cinta setiap harinya</b> — kamu ga perlu berubah jadi siapapun 🌸</span>,
-          <span><b>Apapun yang kamu impikan</b> — aku akan selalu ada di sampingmu, mendukungmu, dan mendoakan yang terbaik untukmu 🤍</span>,
-          <span>Kamu adalah <b>alasan aku percaya</b> bahwa hal-hal indah memang ada di dunia ini 💗</span>
+          <span><b>Always take care, stay safe, stay happy, stay healthy.</b> 💖</span>,
+          <span><b>May you have the biggest smile</b> plastered specially today! 😊</span>,
+          <span><b>You'll face more years to come</b>, with more challenges, surprises, and rewards along! 🎁</span>,
+          <span><b>Aku bangga sama kamuuu</b>, kamu keren banget masih bisa bertahan & ngerayain ultah kamu! 🌟</span>,
+          <span><b>Semoga segera dipertemukan sama pasangannya</b>, biar gak single lama-lama lagi yaaa (kasian deh wkwk) ditunggu kabar bahagianya! 💍✨</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
             padding: '10px 14px', background: '#fff', borderRadius: 12,
-            boxShadow: '0 2px 10px rgba(212,69,108,0.04)'
+            boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
+            border: '1px solid rgba(212,163,89,0.12)'
           }}>
             <div style={{
               width: 24, height: 24, borderRadius: '50%', flexShrink: 0,
-              background: 'linear-gradient(135deg, var(--pink-soft), var(--pink-mid))',
+              background: 'linear-gradient(135deg, var(--gold-accent), var(--pink-deep))',
               color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontSize: '0.75rem', fontWeight: 700, fontFamily: 'var(--font-display)',
               marginTop: 2
@@ -326,86 +355,80 @@ export default function LoveLetter({ onNext }) {
 
   return (
     <div className="stage">
-      {/* === Sealed Envelope === */}
+      {/* Envelope */}
       {!opened && (
         <div ref={envelopeRef} onClick={open} className="glass" style={{
-          width: '100%', maxWidth: '340px', padding: '40px 24px', textAlign: 'center',
+          width: '100%', maxWidth: '350px', padding: '42px 24px', textAlign: 'center',
           cursor: 'pointer', opacity: 0, position: 'relative',
-          background: 'linear-gradient(160deg, #fff5f8 0%, #ffe8ee 100%)',
-          border: '1.5px solid rgba(212,69,108,0.25)',
-          boxShadow: '0 16px 48px rgba(212,69,108,0.18)',
+          background: 'linear-gradient(160deg, #fffaf6 0%, #ffeef3 100%)',
+          border: '1.5px solid var(--glass-border)',
+          boxShadow: '0 16px 48px rgba(45,16,30,0.18)',
         }}>
-          {/* Postage Stamp */}
+          {/* Stamp */}
           <div style={{
-            position: 'absolute', top: 14, right: 14, width: 36, height: 42,
-            border: '2px dashed var(--pink-soft)', borderRadius: 5,
+            position: 'absolute', top: 14, right: 14, width: 38, height: 44,
+            border: '2px dashed var(--gold-accent)', borderRadius: 6,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '1.1rem', opacity: 0.7,
-          }}>🎂</div>
-
-          {/* Floral Decoration */}
-          <img src="/bunga1.png" alt="Flower" style={{
-            position: 'absolute', bottom: -20, right: -20, width: 110,
-            transform: 'rotate(-15deg)', zIndex: 10, pointerEvents: 'none',
-            filter: 'drop-shadow(0 4px 12px rgba(212,69,108,0.3))'
-          }} onError={(e) => e.target.style.display = 'none'} />
+            fontSize: '1.2rem', opacity: 0.85,
+          }}>👑</div>
 
           {/* Wax Seal */}
           <div ref={sealRef} className="anim-breathe" style={{
-            width: 68, height: 68, borderRadius: '50%', margin: '0 auto 20px',
-            background: 'radial-gradient(circle at 40% 35%, #e84d6e 0%, #a1112c 100%)',
+            width: 70, height: 70, borderRadius: '50%', margin: '0 auto 22px',
+            background: 'radial-gradient(circle at 40% 35%, #d4a359 0%, #9e304f 100%)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 6px 24px rgba(212,69,108,0.45), inset 0 -2px 6px rgba(0,0,0,0.2)',
-            border: '3px solid rgba(255,183,197,0.6)',
+            boxShadow: '0 6px 24px rgba(200,59,100,0.45), inset 0 -2px 6px rgba(0,0,0,0.2)',
+            border: '3px solid rgba(247,231,196,0.7)',
           }}>
             <Heart size={32} fill="#fff" color="#fff" style={{ filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.2))' }} />
           </div>
 
           <h2 style={{
-            fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--berry)', marginBottom: 6,
-          }}>Surat Rahasia Untuk Wulan</h2>
+            fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--berry)', marginBottom: 6,
+          }}>Surat Ulang Tahun</h2>
           <p style={{
-            fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Wulan tersayang 💖</p>
+            fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
+          }}>Untuk Nazwa Amelia (Sarah) 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
-            background: 'rgba(212,69,108,0.08)', color: 'var(--pink-deep)',
-            padding: '8px 16px', borderRadius: 20, display: 'inline-block',
+            background: 'rgba(212,163,89,0.12)', color: 'var(--pink-deep)',
+            padding: '8px 18px', borderRadius: 20, display: 'inline-block',
+            border: '1px solid rgba(212,163,89,0.3)',
           }}>
-            👆 Ketuk untuk membuka
+            👆 Ketuk untuk membuka surat
           </div>
         </div>
       )}
 
-      {/* === Opened Letter === */}
+      {/* Opened Letter */}
       {opened && (
         <div ref={letterRef} className="glass" style={{
           width: '100%', maxWidth: '380px', padding: '26px 20px', opacity: 0,
           background: 'linear-gradient(180deg, #ffffff 0%, #fff5f8 100%)',
-          border: '1.5px solid rgba(212,69,108,0.2)',
-          boxShadow: '0 16px 48px rgba(212,69,108,0.15)',
+          border: '1.5px solid var(--glass-border)',
+          boxShadow: '0 16px 48px rgba(45,16,30,0.15)',
         }}>
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 18 }}>
             <h1 style={{
               fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--pink-deep)',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Selamat Ulang Tahun, Wulan.</h1>
+            }}>Selamat Ulang Tahun! ✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
-            }}>dari seseorang yang selalu merindukanmu 🤍</p>
+            }}>Pesan & Doa Spesial Untuk Nazwa Amelia 🌸</p>
           </div>
 
-          {/* Tabs Navigation */}
+          {/* Navigation */}
           <div style={{
-            display: 'flex', background: 'rgba(252,228,236,0.5)', padding: 3,
+            display: 'flex', background: 'rgba(252,232,239,0.6)', padding: 3,
             borderRadius: 14, marginBottom: 16, gap: 2,
           }}>
             {tabs.map((t) => (
               <button key={t.id} onClick={() => setTab(t.id)} style={{
                 flex: 1, padding: '9px 4px', borderRadius: 11, border: 'none',
-                background: tab === t.id ? 'linear-gradient(135deg, var(--pink-deep), var(--pink-mid))' : 'transparent',
+                background: tab === t.id ? 'linear-gradient(135deg, var(--gold-accent), var(--pink-deep))' : 'transparent',
                 color: tab === t.id ? '#fff' : 'var(--berry-light)',
                 fontFamily: 'var(--font-cute)', fontSize: '0.74rem', fontWeight: 700,
                 cursor: 'pointer', transition: 'all 0.2s ease',
@@ -413,14 +436,13 @@ export default function LoveLetter({ onNext }) {
             ))}
           </div>
 
-          {/* Render Tab with Individual GSAP Motion */}
           {tab === 'letter' && <LetterTab />}
           {tab === 'reasons' && <ImpianTab />}
           {tab === 'wishes' && <WishesTab />}
 
           {/* CTA Button */}
           <button className="btn-primary" onClick={onNext} style={{ width: '100%', marginTop: 20 }}>
-            Lanjut Tiup Lilin! 🎂 <ArrowRight size={16} />
+            Lanjut ke Tiup Lilin! 🎂 <ArrowRight size={16} />
           </button>
         </div>
       )}

@@ -1,15 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX, Disc, X } from 'lucide-react';
+import { 
+  Play, Pause, SkipBack, SkipForward, Plus, Heart, 
+  Volume2, VolumeX, Disc, Sparkles, ChevronUp, ChevronDown 
+} from 'lucide-react';
+import gsap from 'gsap';
 
 export default function SpotifyPlayer() {
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [liked, setLiked] = useState(true);
   const [expanded, setExpanded] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   
   const audioRef = useRef(null);
+  const widgetRef = useRef(null);
+  const pillRef = useRef(null);
 
   // Handle play/pause
   useEffect(() => {
@@ -29,7 +36,30 @@ export default function SpotifyPlayer() {
     }
   }, [muted]);
 
-  const toggle = () => setPlaying(!playing);
+  // GSAP Pop-up Entrance Animation on Expand
+  useEffect(() => {
+    if (expanded && widgetRef.current) {
+      gsap.fromTo(widgetRef.current,
+        { opacity: 0, scale: 0.82, y: 35, transformOrigin: 'bottom center' },
+        { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.6)' }
+      );
+    }
+  }, [expanded]);
+
+  // GSAP Entrance Animation on Mini Pill Reveal
+  useEffect(() => {
+    if (!expanded && pillRef.current) {
+      gsap.fromTo(pillRef.current,
+        { opacity: 0, scale: 0.88, y: 15 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.35, ease: 'back.out(1.8)' }
+      );
+    }
+  }, [expanded]);
+
+  const togglePlay = (e) => {
+    if (e) e.stopPropagation();
+    setPlaying(!playing);
+  };
 
   const handleTimeUpdate = () => {
     if (audioRef.current) {
@@ -49,201 +79,311 @@ export default function SpotifyPlayer() {
   };
 
   const formatTime = (time) => {
-    if (isNaN(time)) return '0:00';
+    if (isNaN(time) || !time) return '0:00';
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
+
+  const formatRemaining = (current, total) => {
+    if (isNaN(total) || !total) return '-0:00';
+    const remaining = total - current;
+    const minutes = Math.floor(remaining / 60);
+    const seconds = Math.floor(remaining % 60);
+    return `-${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   const handleSeek = (e) => {
     if (audioRef.current && duration) {
       const rect = e.currentTarget.getBoundingClientRect();
       const clickX = e.clientX - rect.left;
-      const newProgress = clickX / rect.width;
+      const newProgress = Math.max(0, Math.min(1, clickX / rect.width));
       audioRef.current.currentTime = newProgress * duration;
     }
   };
 
-  const replay = () => {
+  const restartSong = () => {
     if (audioRef.current) {
       audioRef.current.currentTime = 0;
       if (!playing) setPlaying(true);
     }
   };
 
+  // GSAP Smooth Minimize Animation
+  const minimizeWidget = () => {
+    if (widgetRef.current) {
+      gsap.to(widgetRef.current, {
+        opacity: 0,
+        scale: 0.85,
+        y: 25,
+        duration: 0.25,
+        ease: 'power2.in',
+        onComplete: () => setExpanded(false)
+      });
+    } else {
+      setExpanded(false);
+    }
+  };
+
   return (
     <div style={{
-      position: 'fixed', bottom: 14, left: '50%', transform: 'translateX(-50%)',
-      zIndex: 999, width: '90%', maxWidth: 410,
+      position: 'fixed', bottom: 12, left: '50%', transform: 'translateX(-50%)',
+      zIndex: 999, width: '92%', maxWidth: expanded ? 410 : 'max-content',
     }}>
-      {/* Actual Audio Element */}
+      {/* Audio Element */}
       <audio
         ref={audioRef}
-        src="/Pasilyo_spotdown.org.mp3"
-        preload="none"
+        src="/bgm.mp3"
+        preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setPlaying(false)}
       />
 
-      {/* ── Mini Pill ── */}
+      {/* ── MODE 1: Sleek Floating Mini Pill (default) ── */}
       {!expanded && (
-        <div onClick={() => setExpanded(true)} style={{
-          padding: '10px 14px', display: 'flex', alignItems: 'center',
-          justifyContent: 'space-between', gap: 12,
-          background: 'rgba(255,248,250,0.94)', backdropFilter: 'blur(16px)',
-          border: '1.5px solid rgba(212,69,108,0.2)', borderRadius: 50,
-          boxShadow: '0 8px 28px rgba(212,69,108,0.2)', cursor: 'pointer',
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, overflow: 'hidden', flex: 1 }}>
-            {/* Vinyl mini */}
-            <div className={`anim-spin ${!playing ? 'anim-spin-paused' : ''}`} style={{
-              width: 36, height: 36, borderRadius: '50%', flexShrink: 0,
-              background: 'radial-gradient(circle, #1a0a10 32%, #333 33%, #1a0a10 56%, var(--pink-deep) 58%)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
-            }}>
-              <div style={{ width: 9, height: 9, background: 'var(--cream)', borderRadius: '50%' }} />
-            </div>
-            <div style={{ overflow: 'hidden' }}>
-              <div style={{
-                fontFamily: 'var(--font-cute)', fontSize: '0.82rem', fontWeight: 700,
-                color: 'var(--berry)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-              }}>Pasilyo</div>
-              <div style={{ fontSize: '0.68rem', color: 'var(--pink-deep)', fontWeight: 600 }}>
-                {playing ? '🎵 Now Playing' : '▶ Tap to Play'}
-              </div>
-            </div>
-          </div>
-          <button onClick={(e) => { e.stopPropagation(); toggle(); }} style={{
-            width: 34, height: 34, borderRadius: '50%', border: 'none', flexShrink: 0,
-            background: 'linear-gradient(135deg, var(--pink-deep), var(--pink-mid))',
-            color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer', boxShadow: '0 3px 12px rgba(212,69,108,0.3)',
-          }}>
-            {playing ? <Pause size={15} /> : <Play size={15} style={{ marginLeft: 2 }} />}
-          </button>
-        </div>
-      )}
-
-      {/* ── Expanded Card ── */}
-      {expanded && (
-        <div style={{
-          padding: '20px 18px',
-          background: 'linear-gradient(155deg, rgba(255,248,250,0.97), rgba(255,232,238,0.98))',
-          backdropFilter: 'blur(20px)', border: '1.5px solid rgba(212,69,108,0.2)',
-          boxShadow: '0 16px 48px rgba(212,69,108,0.25)', borderRadius: 26,
-        }}>
-          {/* Header */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-            <div style={{
-              display: 'flex', alignItems: 'center', gap: 5,
-              fontSize: '0.7rem', color: '#1DB954', fontWeight: 700, letterSpacing: 0.5,
-            }}>
-              <Disc size={14} /> MUSIC PLAYER
-            </div>
-            <button onClick={() => setExpanded(false)} style={{
-              background: 'none', border: 'none', color: 'var(--pink-deep)',
-              cursor: 'pointer', padding: 4,
-            }}>
-              <X size={18} />
-            </button>
-          </div>
-
-          {/* Vinyl + Album Cover */}
+        <div
+          ref={pillRef}
+          onClick={() => setExpanded(true)}
+          style={{
+            background: 'rgba(18, 18, 18, 0.92)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            borderRadius: 50,
+            padding: '6px 14px 6px 8px',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(29, 185, 84, 0.2)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            color: '#ffffff',
+            cursor: 'pointer',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            userSelect: 'none',
+          }}
+          onPointerDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
+          onPointerUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          {/* Mini Album Cover */}
           <div style={{
-            display: 'flex', justifyContent: 'center', alignItems: 'center',
-            margin: '10px 0 20px', position: 'relative', height: 140,
+            width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', flexShrink: 0,
+            position: 'relative', background: '#282828',
+            border: '1.5px solid #1DB954',
           }}>
-            {/* Vinyl */}
-            <div className={`anim-spin ${!playing ? 'anim-spin-paused' : ''}`} style={{
-              width: 120, height: 120, borderRadius: '50%', position: 'absolute',
-              left: playing ? '58%' : '50%', transform: 'translateX(-50%)',
-              transition: 'left 0.5s cubic-bezier(0.175,0.885,0.32,1.275)',
-              background: 'radial-gradient(circle, #1a0a10 28%, #2a1520 29%, #1a0a10 52%, var(--pink-deep) 54%)',
-              boxShadow: '0 6px 20px rgba(0,0,0,0.3)', zIndex: 1,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-              {/* Grooves */}
-              <div style={{ width: 90, height: 90, border: '1px solid rgba(255,255,255,0.08)', borderRadius: '50%', position: 'absolute' }} />
-              <div style={{ width: 60, height: 60, border: '1px solid rgba(255,255,255,0.08)', borderRadius: '50%', position: 'absolute' }} />
-              <div style={{
-                width: 34, height: 34, background: 'var(--cream)', borderRadius: '50%',
-                border: '2px solid var(--pink-mid)', zIndex: 2,
-              }} />
-            </div>
-
-            {/* Album Sleeve */}
-            <div style={{
-              width: 120, height: 120, borderRadius: 14, position: 'absolute',
-              left: playing ? '32%' : '50%', transform: 'translateX(-50%)',
-              transition: 'left 0.5s cubic-bezier(0.175,0.885,0.32,1.275)',
-              zIndex: 2, overflow: 'hidden', border: '2px solid #fff',
-              boxShadow: '0 8px 24px rgba(212,69,108,0.2)',
-            }}>
-              <img src="/pasilyo.webp" alt="Album" style={{
-                width: '100%', height: '100%', objectFit: 'cover',
-              }} onError={(e) => {
-                e.target.src = '/bestie1.jpg';
-                e.target.parentElement.style.background = 'linear-gradient(135deg, #ff9a9e, #fecfef)';
-              }} />
-            </div>
+            <img
+              src="/foto-lagu.jpg"
+              alt="not a lot, just forever"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              onError={(e) => { e.target.src = '/artworks-8kl4gY2gl0wW-0-t1080x1080.webp'; }}
+            />
+            {playing && (
+              <div className="anim-spin" style={{
+                position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.3)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center'
+              }}>
+                <Disc size={16} color="#1DB954" />
+              </div>
+            )}
           </div>
 
           {/* Song Info */}
-          <div style={{ textAlign: 'center', marginBottom: 14 }}>
-            <h4 style={{
-              fontFamily: 'var(--font-cute)', fontSize: '1.2rem', color: 'var(--berry)', fontWeight: 800,
-            }}>Pasilyo</h4>
-            <p style={{ fontSize: '0.8rem', color: 'var(--pink-deep)', fontWeight: 600, marginTop: 4 }}>
-              SunKissed Lola
-            </p>
-          </div>
-
-          {/* Progress */}
-          <div style={{ marginBottom: 14 }}>
-            <div 
-              onClick={handleSeek}
-              style={{
-                height: 6, background: 'rgba(212,69,108,0.12)', borderRadius: 10, 
-                overflow: 'hidden', cursor: 'pointer', position: 'relative'
-              }}
-            >
-              <div style={{
-                width: `${progress}%`, height: '100%', borderRadius: 10,
-                background: 'linear-gradient(90deg, var(--pink-deep), var(--pink-mid))',
-                transition: 'width 0.1s linear',
-              }} />
+          <div style={{ overflow: 'hidden', paddingRight: 4 }}>
+            <div style={{
+              fontSize: '0.78rem', fontWeight: 700, color: '#ffffff',
+              lineHeight: 1.1, whiteSpace: 'nowrap'
+            }}>
+              not a lot, just forever
             </div>
             <div style={{
-              display: 'flex', justifyContent: 'space-between',
-              fontSize: '0.7rem', color: 'var(--rose-gold)', marginTop: 6, fontWeight: 600
+              fontSize: '0.66rem', color: '#1DB954', fontWeight: 600,
+              display: 'flex', alignItems: 'center', gap: 3, marginTop: 1
             }}>
-              <span>{formatTime(currentTime)}</span><span>{formatTime(duration)}</span>
+              {playing ? '🎵 Playing' : '▶ Tap for Player'}
             </div>
           </div>
 
-          {/* Controls */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 24 }}>
-            <button onClick={() => setMuted(!muted)} style={{
-              background: 'none', border: 'none', color: 'var(--pink-deep)', cursor: 'pointer', padding: 4,
+          {/* Play/Pause Button */}
+          <button
+            onClick={togglePlay}
+            style={{
+              width: 28, height: 28, borderRadius: '50%', border: 'none',
+              background: '#ffffff', color: '#000000',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              cursor: 'pointer', flexShrink: 0,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+            }}
+          >
+            {playing ? <Pause size={13} fill="#000" /> : <Play size={13} fill="#000" style={{ marginLeft: 1 }} />}
+          </button>
+
+          {/* Expand Indicator */}
+          <div style={{ color: '#b3b3b3', display: 'flex', alignItems: 'center', opacity: 0.8 }}>
+            <ChevronUp size={16} />
+          </div>
+        </div>
+      )}
+
+      {/* ── MODE 2: GSAP Animated Pop-up Spotify Widget UI ── */}
+      {expanded && (
+        <div
+          ref={widgetRef}
+          style={{
+            background: 'rgba(18, 18, 18, 0.96)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            borderRadius: 24,
+            padding: '12px 14px',
+            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(29, 185, 84, 0.25)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            color: '#ffffff',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            position: 'relative',
+          }}
+        >
+          {/* Close/Minimize Button at Top-Right */}
+          <button
+            onClick={minimizeWidget}
+            style={{
+              position: 'absolute', top: 10, right: 10,
+              width: 24, height: 24, borderRadius: '50%',
+              background: 'rgba(255,255,255,0.12)', border: 'none',
+              color: '#b3b3b3', display: 'flex', alignItems: 'center', justifyContent: 'center',
+              cursor: 'pointer', zIndex: 10, transition: 'background 0.2s'
+            }}
+            title="Minimize"
+          >
+            <ChevronDown size={16} />
+          </button>
+
+          {/* Left Side: Album Cover */}
+          <div style={{
+            width: 76, height: 76, borderRadius: 16, overflow: 'hidden', flexShrink: 0,
+            position: 'relative', boxShadow: '0 4px 14px rgba(0,0,0,0.5)',
+            background: '#282828',
+          }}>
+            <img
+              src="/foto-lagu.jpg"
+              alt="not a lot, just forever - Adrianne Lenker"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              onError={(e) => { e.target.src = '/artworks-8kl4gY2gl0wW-0-t1080x1080.webp'; }}
+            />
+            {playing && (
+              <div style={{
+                position: 'absolute', bottom: 4, right: 4, width: 18, height: 18,
+                borderRadius: '50%', background: '#1DB954', display: 'flex',
+                alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 6px rgba(0,0,0,0.4)'
+              }}>
+                <Disc size={11} color="#000" className="anim-spin" />
+              </div>
+            )}
+          </div>
+
+          {/* Right Side: Info, Progress & Controls */}
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0, paddingRight: 24 }}>
+            
+            {/* Top Row: Song Title, Singer & Heart */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div style={{ overflow: 'hidden', paddingRight: 4 }}>
+                <div style={{
+                  fontSize: '0.88rem', fontWeight: 700, color: '#ffffff',
+                  whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                  letterSpacing: '-0.2px'
+                }}>
+                  not a lot, just forever
+                </div>
+                <div style={{
+                  fontSize: '0.74rem', color: '#b3b3b3', fontWeight: 500,
+                  whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: 1
+                }}>
+                  Adrianne Lenker
+                </div>
+              </div>
+
+              <button
+                onClick={() => setLiked(!liked)}
+                style={{
+                  background: 'none', border: 'none', color: liked ? '#1DB954' : '#b3b3b3',
+                  cursor: 'pointer', padding: 2, display: 'flex', alignItems: 'center',
+                  flexShrink: 0
+                }}
+              >
+                {liked ? <Heart size={18} fill="#1DB954" /> : <Plus size={18} />}
+              </button>
+            </div>
+
+            {/* Middle Row: Progress Bar & Time */}
+            <div>
+              <div
+                onClick={handleSeek}
+                style={{
+                  height: 4, background: '#4d4d4d', borderRadius: 4,
+                  cursor: 'pointer', position: 'relative', overflow: 'hidden'
+                }}
+              >
+                <div style={{
+                  width: `${progress}%`, height: '100%', borderRadius: 4,
+                  background: '#ffffff', transition: 'width 0.1s linear'
+                }} />
+              </div>
+
+              <div style={{
+                display: 'flex', justifyContent: 'space-between',
+                fontSize: '0.62rem', color: '#b3b3b3', marginTop: 3, fontWeight: 500
+              }}>
+                <span>{formatTime(currentTime)}</span>
+                <span>{formatRemaining(currentTime, duration)}</span>
+              </div>
+            </div>
+
+            {/* Bottom Row: Control Buttons */}
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              paddingTop: 1
             }}>
-              {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-            </button>
-            <button onClick={toggle} style={{
-              width: 54, height: 54, borderRadius: '50%', border: 'none',
-              background: 'linear-gradient(135deg, var(--pink-deep), #b03054)',
-              color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              cursor: 'pointer', boxShadow: '0 6px 20px rgba(212,69,108,0.4)',
-            }}>
-              {playing ? <Pause size={24} /> : <Play size={24} style={{ marginLeft: 3 }} />}
-            </button>
-            <button onClick={replay} style={{
-              background: 'none', border: 'none', color: 'var(--pink-deep)',
-              cursor: 'pointer', fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700,
-            }}>
-              Replay
-            </button>
+              <button
+                onClick={() => setMuted(!muted)}
+                style={{ background: 'none', border: 'none', color: muted ? '#1DB954' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
+              >
+                {muted ? <VolumeX size={15} /> : <Sparkles size={15} />}
+              </button>
+
+              <button
+                onClick={restartSong}
+                style={{ background: 'none', border: 'none', color: '#ffffff', cursor: 'pointer', padding: 2 }}
+              >
+                <SkipBack size={18} fill="#ffffff" />
+              </button>
+
+              <button
+                onClick={togglePlay}
+                style={{
+                  width: 36, height: 36, borderRadius: '50%', border: 'none',
+                  background: '#ffffff', color: '#000000',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                }}
+              >
+                {playing ? <Pause size={17} fill="#000000" /> : <Play size={17} fill="#000000" style={{ marginLeft: 2 }} />}
+              </button>
+
+              <button
+                onClick={restartSong}
+                style={{ background: 'none', border: 'none', color: '#ffffff', cursor: 'pointer', padding: 2 }}
+              >
+                <SkipForward size={18} fill="#ffffff" />
+              </button>
+
+              <button
+                onClick={() => setMuted(!muted)}
+                style={{ background: 'none', border: 'none', color: muted ? '#e85d88' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
+              >
+                {muted ? <VolumeX size={15} /> : <Volume2 size={15} />}
+              </button>
+            </div>
+
           </div>
         </div>
       )}
