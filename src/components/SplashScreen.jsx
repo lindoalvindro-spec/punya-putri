@@ -124,7 +124,7 @@ export default function SplashScreen({ onStart }) {
       {/* Background Photo */}
       <img
         ref={photoRef}
-        src="/gambar 2.jpeg"
+        src="/gambar5.jpeg"
         alt=""
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
