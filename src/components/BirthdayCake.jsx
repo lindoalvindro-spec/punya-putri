@@ -52,7 +52,7 @@ export default function BirthdayCake({ onShowGallery }) {
         {/* Title */}
         <h2 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.6rem', color: 'var(--berry)', marginBottom: 4,
-        }}>Make a Wish, Mell! ✨</h2>
+        }}>Make a Wish, Wulan! ✨</h2>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: 'var(--pink-deep)',
           fontWeight: 600, marginBottom: 28, opacity: 0.85,

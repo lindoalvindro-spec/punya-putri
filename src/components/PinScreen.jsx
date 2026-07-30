@@ -5,7 +5,7 @@ import gsap from 'gsap';
 export default function PinScreen({ onUnlock }) {
   const [pin, setPin] = useState('');
   const [error, setError] = useState(false);
-  const correctPin = '300808';
+  const correctPin = '310707';
   const cardRef = useRef(null);
   const dotsRef = useRef([]);
   const lockRef = useRef(null);
@@ -83,13 +83,13 @@ export default function PinScreen({ onUnlock }) {
           fontFamily: 'var(--font-display)', fontSize: '1.6rem', color: 'var(--berry)',
           textAlign: 'center', lineHeight: 1.2, marginBottom: 4,
         }}>
-          Secret Gate for Mell ✨
+          Secret Gate for Wulan ✨
         </h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)',
           textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.85,
         }}>
-          Masukkan PIN tanggal lahir Melodi 💕
+          Masukkan PIN tanggal lahir Wulan 💕
         </p>
 
         {/* PIN Dots */}
@@ -107,7 +107,7 @@ export default function PinScreen({ onUnlock }) {
                 boxShadow: filled ? '0 4px 16px rgba(212,69,108,0.3)' : 'none',
                 transition: 'background 0.15s, border 0.15s, box-shadow 0.15s',
               }}>
-                {filled && <img src="/bunga3.png" alt="*" style={{ width: 24, height: 24, objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }} />}
+                {filled && <img src="/gambar 11 no bg benar.png" alt="*" style={{ width: 24, height: 24, objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }} />}
               </div>
             );
           })}

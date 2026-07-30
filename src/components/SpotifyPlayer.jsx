@@ -79,7 +79,8 @@ export default function SpotifyPlayer() {
       {/* Actual Audio Element */}
       <audio
         ref={audioRef}
-        src="/bgm.mp3"
+        src="/Pasilyo_spotdown.org.mp3"
+        preload="none"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setPlaying(false)}
@@ -108,7 +109,7 @@ export default function SpotifyPlayer() {
               <div style={{
                 fontFamily: 'var(--font-cute)', fontSize: '0.82rem', fontWeight: 700,
                 color: 'var(--berry)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-              }}>Not a Lot, Just Forever</div>
+              }}>Pasilyo</div>
               <div style={{ fontSize: '0.68rem', color: 'var(--pink-deep)', fontWeight: 600 }}>
                 {playing ? '🎵 Now Playing' : '▶ Tap to Play'}
               </div>
@@ -180,7 +181,7 @@ export default function SpotifyPlayer() {
               zIndex: 2, overflow: 'hidden', border: '2px solid #fff',
               boxShadow: '0 8px 24px rgba(212,69,108,0.2)',
             }}>
-              <img src="/foto-lagu.jpg" alt="Album" style={{
+              <img src="/pasilyo.webp" alt="Album" style={{
                 width: '100%', height: '100%', objectFit: 'cover',
               }} onError={(e) => {
                 e.target.src = '/bestie1.jpg';
@@ -193,9 +194,9 @@ export default function SpotifyPlayer() {
           <div style={{ textAlign: 'center', marginBottom: 14 }}>
             <h4 style={{
               fontFamily: 'var(--font-cute)', fontSize: '1.2rem', color: 'var(--berry)', fontWeight: 800,
-            }}>Not a Lot, Just Forever</h4>
+            }}>Pasilyo</h4>
             <p style={{ fontSize: '0.8rem', color: 'var(--pink-deep)', fontWeight: 600, marginTop: 4 }}>
-              Adrianne Lenker
+              SunKissed Lola
             </p>
           </div>
 

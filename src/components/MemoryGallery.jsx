@@ -1,19 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import gsap from 'gsap';
 
 export default function MemoryGallery({ onNext }) {
-  const [videoOpen, setVideoOpen] = useState(false);
   const [idx, setIdx] = useState(0);
   const containerRef = useRef(null);
 
   const photos = [
     '/gambar 1.jpeg',
-    '/gambar2.jpeg',
-    '/gambar3.jpeg',
-    '/gambar4.jpeg',
-    '/gambar5.jpeg',
-    '/gambar6.jpeg',
+    '/gambar 2.jpeg',
+    '/gambar 3.jpeg',
+    '/gambar 4.jpeg',
+    '/gambar 5.jpeg',
   ];
 
   useEffect(() => {
@@ -73,10 +71,10 @@ export default function MemoryGallery({ onNext }) {
         <h1 style={{
           fontFamily: 'var(--font-display)', fontSize: '2.1rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
-        }}>Kenangan Kita ✨</h1>
+        }}>Selalu Cantik, Selalu Bersinar 🌸</h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.85rem', color: 'var(--rose-gold)', fontWeight: 600,
-        }}>Setiap momen berharga bersamamu.</p>
+        }}>Setiap foto adalah bukti betapa indahnya kamu, Wulan.</p>
       </div>
 
       {/* ─── Cinematic Photo Frame ─── */}
@@ -116,63 +114,7 @@ export default function MemoryGallery({ onNext }) {
         ))}
       </div>
 
-      {/* Video Card (Kept minimal) */}
-      <div className="gallery-controls mem-card" onClick={() => setVideoOpen(true)} style={{
-        width: '100%', maxWidth: 360,
-        background: 'linear-gradient(135deg, var(--pink-deep), var(--pink-mid))',
-        padding: '18px 20px', borderRadius: 20, marginBottom: 24,
-        boxShadow: '0 12px 32px rgba(212,69,108,0.25)', cursor: 'pointer',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 14,
-      }}>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: 1.5, color: 'rgba(255,255,255,0.7)', fontWeight: 700 }}>
-            Bonus 🎥
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: '#fff', marginTop: 2 }}>
-            Video Highlight
-          </h4>
-        </div>
-        <div style={{
-          width: 44, height: 44, borderRadius: '50%', flexShrink: 0,
-          background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(6px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          border: '1px solid rgba(255,255,255,0.3)'
-        }}>
-          <Play size={20} fill="#fff" color="#fff" style={{ marginLeft: 3 }} />
-        </div>
-      </div>
 
-      {/* Video Modal */}
-      {videoOpen && (
-        <div onClick={() => setVideoOpen(false)} style={{
-          position: 'fixed', inset: 0, background: 'rgba(26,10,16,0.95)', backdropFilter: 'blur(10px)',
-          zIndex: 1000, display: 'flex', flexDirection: 'column',
-          alignItems: 'center', justifyContent: 'center', padding: 20,
-        }}>
-          <div className="glass" onClick={(e) => e.stopPropagation()} style={{
-            width: '90%', maxWidth: 380, padding: 20, textAlign: 'center', background: '#fff', borderRadius: 24
-          }}>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', color: 'var(--berry)', marginBottom: 14 }}>
-              Video Player 🎥
-            </h3>
-            <div style={{
-              width: '100%', borderRadius: 16, overflow: 'hidden',
-              boxShadow: '0 8px 24px rgba(212,69,108,0.2)'
-            }}>
-              <video 
-                src="/WhatsApp Video 2026-07-29 at 17.38.52.mp4" 
-                controls 
-                autoPlay 
-                playsInline
-                style={{ width: '100%', display: 'block', maxHeight: '60vh', objectFit: 'contain', background: '#000' }}
-              />
-            </div>
-            <button className="btn-ghost" onClick={() => setVideoOpen(false)} style={{ marginTop: 16, width: '100%' }}>
-              Tutup Video
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Next: Birthday Wish Card */}
       <button className="gallery-controls btn-primary" onClick={onNext} style={{ width: '100%', maxWidth: 360 }}>

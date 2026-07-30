@@ -124,7 +124,7 @@ export default function SplashScreen({ onStart }) {
       {/* Background Photo */}
       <img
         ref={photoRef}
-        src="/gambar5.jpeg"
+        src="/gambar 3.jpeg"
         alt=""
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
@@ -173,7 +173,7 @@ export default function SplashScreen({ onStart }) {
           color: 'rgba(255,240,245,0.8)', letterSpacing: '2px', textTransform: 'uppercase',
           marginBottom: 8, opacity: 0,
         }}>
-          Hai Mell, ada sesuatu...
+          Hai Wulan, ada sesuatu...
         </p>
 
         <h1 ref={line2Ref} style={{
@@ -181,7 +181,7 @@ export default function SplashScreen({ onStart }) {
           lineHeight: 1.15, marginBottom: 10, opacity: 0,
           textShadow: '0 4px 20px rgba(212,69,108,0.5)',
         }}>
-          Happy 18th Birthday, Melodi! 👑
+          Happy Birthday, Wulan! 👑
         </h1>
 
         <p ref={line3Ref} style={{
