@@ -8,12 +8,13 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const photos = [
-    '/gambar 1.jpeg',
-    '/gambar2.jpeg',
-    '/gambar3.jpeg',
-    '/gambar4.jpeg',
-    '/gambar5.jpeg',
-    '/gambar6.jpeg',
+    '/gambar 2.jpeg',
+    '/gambar 3.jpeg',
+    '/gambar 4.jpeg',
+    '/gambar 5.jpeg',
+    '/gambar 6.jpeg',
+    '/gambar 7.jpeg',
+    '/gambar1.jpeg',
   ];
 
   useEffect(() => {

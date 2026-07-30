@@ -69,7 +69,7 @@ export default function BirthdayWishCard({ onRestart }) {
               overflow: 'hidden', border: '5px solid #fff',
               boxShadow: '0 12px 32px rgba(212,69,108,0.15)'
             }}>
-              <img src="/gambar5.jpeg" alt="Modi & Ritsukikk" style={{
+              <img src="/gambar1.jpeg" alt="" style={{
                 width: '100%', height: '100%', objectFit: 'cover'
               }} onError={(e) => { e.target.src = '/bestie2.jpg'; }} />
             </div>
