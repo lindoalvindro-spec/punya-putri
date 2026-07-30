@@ -173,7 +173,7 @@ function ImpianTab() {
       icon: '💍',
       badge: 'HARAPAN 04 (SPESIAL)',
       title: 'Dipertemukan Pasangan Terbaik ✨',
-      text: 'Semoga di tahun ini segera dipertemukan dengan jodoh & pasangan terbaik yang siap menemani hari-harimu (biar gak single lama-lama lagi wkwk)! 💖',
+      text: 'Semoga secepatnya dipertemukan dengan jodoh & pasangan terbaik yang siap menemani hari-harimu (biar gak single lama-lama lagi wkwk)! 💖',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
