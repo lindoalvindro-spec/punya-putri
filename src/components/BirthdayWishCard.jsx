@@ -113,9 +113,9 @@ export default function BirthdayWishCard({ onRestart }) {
                 boxShadow: '0 12px 32px rgba(200,59,100,0.25)',
                 position: 'relative', zIndex: 1
               }}>
-                <img src="/gambar 22.jpeg" alt="Nazwa Amelia" style={{
+                <img src="/artis 2.jpeg" alt="Happy Girlfriend Day" style={{
                   width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'
-                }} onError={(e) => { e.target.src = '/gambar 21.jpeg'; }} />
+                }} onError={(e) => { e.target.src = '/artis 1.jpeg'; }} />
               </div>
             </div>
 
@@ -124,7 +124,7 @@ export default function BirthdayWishCard({ onRestart }) {
               fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: 'var(--rose-gold)',
               letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 4, fontWeight: 700
             }}>
-              Official Museum Souvenir
+              Official Girlfriend Day Card
             </h3>
             
             <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 18 }}>
@@ -132,7 +132,7 @@ export default function BirthdayWishCard({ onRestart }) {
                 fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                Nazwa Amelia
+                My Favorite Girl 💖
               </h1>
             </div>
 
@@ -146,16 +146,16 @@ export default function BirthdayWishCard({ onRestart }) {
               fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry-light)',
               lineHeight: 1.7, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
             }}>
-              "I hope you'll stay till old age, bakal bisa lebih bahagia, lebih aktif, lebih fresh to a new year. Always take care, stay safe, stay happy, stay healthy. May you have the biggest smile plastered specially today!"
+              "Happy Girlfriend Day! Thank you for bringing so much warmth, laughter, and happiness every single day. Always stay safe, stay healthy, stay bright, and keep wearing that beautiful smile!"
             </p>
 
             {/* Sign Off */}
             <div className="reveal-el" style={{ marginBottom: 10 }}>
               <p style={{ fontSize: '0.72rem', color: 'var(--rose-gold)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 1.2, fontWeight: 700 }}>
-                Warmest Wishes & Friendship
+                With Endless Love & Appreciation
               </p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
-                Happy Birthday, Nazwa! 🌸
+                Happy Girlfriend Day! 🌸💖
               </p>
             </div>
 

@@ -8,15 +8,14 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const exhibits = [
-    { src: '/gambar 21.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
-    { src: '/gambar 22.jpeg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
-    { src: '/gambar 23.jpeg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
-    { src: '/gambar 24.jpeg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
-    { src: '/gambar 25.jpeg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
-    { src: '/gambar 26.jpeg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
-    { src: '/gambar 27.jpeg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
-    { src: '/gambar 28.jpeg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
-    { src: '/gambar 29.jpeg', tag: 'EXHIBIT #09', title: 'Shining Bright 👑' },
+    { src: '/artis 1.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
+    { src: '/artis 2.jpeg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
+    { src: '/artis 3.jpeg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
+    { src: '/artis 4.jpeg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
+    { src: '/artis 5.jpeg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
+    { src: '/artis 7.jpeg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
+    { src: '/artis 8.jpeg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
+    { src: '/artis 9.jpeg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
   ];
 
   useEffect(() => {

@@ -43,8 +43,8 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(212,163,89,0.35)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/gambar 21.jpeg" alt="Nazwa Amelia" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          onError={(e) => { e.target.src = '/gambar 22.jpeg'; }} />
+        <img src="/artis 3.jpeg" alt="Girlfriend Day" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={(e) => { e.target.src = '/artis 1.jpeg'; }} />
       </div>
 
       {/* Opening Greeting Header */}
@@ -57,7 +57,7 @@ function LetterTab() {
         }}>
           <Sparkles size={13} color="var(--pink-deep)" />
           <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: 'var(--pink-deep)' }}>
-            SELAMAT ULANG TAHUN!! 🎉✨
+            HAPPY GIRLFRIEND DAY!! 💖✨
           </span>
         </div>
       </div>

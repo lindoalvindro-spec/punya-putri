@@ -115,16 +115,16 @@ export default function SplashScreen({ onStart }) {
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', overflow: 'hidden',
     }}>
-      {/* Background Hero Photo (gambar 21.jpeg) */}
+      {/* Background Hero Photo (artis 4.jpeg) */}
       <img
         ref={photoRef}
-        src="/gambar 21.jpeg"
-        alt="Nazwa Amelia"
+        src="/artis 4.jpeg"
+        alt="Happy Girlfriend Day"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
         }}
-        onError={(e) => { e.target.src = '/gambar 22.jpeg'; }}
+        onError={(e) => { e.target.src = '/artis 1.jpeg'; }}
       />
 
       {/* Luxury Dark Gradient Overlay */}
@@ -176,7 +176,7 @@ export default function SplashScreen({ onStart }) {
             fontFamily: 'var(--font-cute)', fontSize: '0.72rem', fontWeight: 700,
             color: 'var(--gold-light)', letterSpacing: '1.5px', textTransform: 'uppercase',
           }}>
-            VIP Museum Exhibition
+            Happy Girlfriend Day 💖
           </span>
         </div>
 
@@ -186,16 +186,16 @@ export default function SplashScreen({ onStart }) {
           color: 'rgba(255,244,247,0.85)', letterSpacing: '2px', textTransform: 'uppercase',
           marginBottom: 8, opacity: 0,
         }}>
-          Special Birthday Exhibition For
+          Special Exhibition Dedicated To
         </p>
 
-        {/* Title: Nazwa Amelia */}
+        {/* Title: My Beloved Girlfriend */}
         <h1 ref={line2Ref} style={{
           fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: '#fff',
           lineHeight: 1.1, marginBottom: 12, opacity: 0,
           textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          Nazwa Amelia 👑
+          My Favorite Girl 👑
         </h1>
 
         <p ref={line3Ref} style={{
@@ -203,7 +203,7 @@ export default function SplashScreen({ onStart }) {
           color: 'var(--gold-light)', fontWeight: 600, marginBottom: 32, opacity: 0,
           letterSpacing: '0.5px'
         }}>
-          The Museum of Us & Endless Memories ✨
+          The Museum of Love & Beautiful Memories ✨
         </p>
 
         {/* Action Button */}
