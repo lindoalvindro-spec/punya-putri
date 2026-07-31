@@ -113,9 +113,9 @@ export default function BirthdayWishCard({ onRestart }) {
                 boxShadow: '0 12px 32px rgba(200,59,100,0.25)',
                 position: 'relative', zIndex: 1
               }}>
-                <img src="/artis 2.jpeg" alt="Happy Girlfriend Day" style={{
-                  width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top'
-                }} onError={(e) => { e.target.src = '/artis 1.jpeg'; }} />
+                <img src="/gambar 36.jpeg" alt="Happy Girlfriend Day" style={{
+                  width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center'
+                }} onError={(e) => { e.target.src = '/gambar 36.jpeg'; }} />
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export default function BirthdayWishCard({ onRestart }) {
                 fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                Sherly 💖
+                Bebee 💖
               </h1>
             </div>
 
@@ -155,7 +155,7 @@ export default function BirthdayWishCard({ onRestart }) {
                 With Endless Love & Appreciation
               </p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
-                Happy Girlfriend Day, Sherly! 🌸💖
+                Happy Girlfriend Day, Bebee! 🌸💖
               </p>
             </div>
 

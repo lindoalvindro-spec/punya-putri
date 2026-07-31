@@ -115,16 +115,16 @@ export default function SplashScreen({ onStart }) {
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', overflow: 'hidden',
     }}>
-      {/* Background Hero Photo (artis 4.jpeg) */}
+      {/* Background Hero Photo (gambar 32.jpeg) */}
       <img
         ref={photoRef}
-        src="/artis 4.jpeg"
+        src="/gambar 32.jpeg"
         alt="Happy Girlfriend Day"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
         }}
-        onError={(e) => { e.target.src = '/artis 1.jpeg'; }}
+        onError={(e) => { e.target.src = '/gambar 32.jpeg'; }}
       />
 
       {/* Luxury Dark Gradient Overlay */}
@@ -195,7 +195,7 @@ export default function SplashScreen({ onStart }) {
           lineHeight: 1.1, marginBottom: 12, opacity: 0,
           textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          Sherly 👑
+          Bebee 👑
         </h1>
 
         <p ref={line3Ref} style={{

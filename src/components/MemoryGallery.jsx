@@ -8,14 +8,14 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const exhibits = [
-    { src: '/artis 1.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
-    { src: '/artis 2.jpeg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
-    { src: '/artis 3.jpeg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
-    { src: '/artis 4.jpeg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
-    { src: '/artis 5.jpeg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
-    { src: '/artis 7.jpeg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
-    { src: '/artis 8.jpeg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
-    { src: '/artis 9.jpeg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
+    { src: '/31.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
+    { src: '/gambar 32.jpeg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
+    { src: '/gambar 33.jpeg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
+    { src: '/gambar 34.jpeg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
+    { src: '/gambar 35.jpeg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
+    { src: '/gambar 36.jpeg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
+    { src: '/gambar 37.jpeg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
+    { src: '/gambar 38.jpeg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
   ];
 
   useEffect(() => {
@@ -88,12 +88,12 @@ export default function MemoryGallery({ onNext }) {
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Nazwa’s Photo Gallery 🌸
+          Bebee’s Photo Gallery 🌸
         </h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: 'var(--rose-gold)', fontWeight: 600,
         }}>
-          Sembilan potret keindahan & keceriaan Nazwa Amelia ✨
+          Delapan potret keindahan & keceriaan Bebee ✨
         </p>
       </div>
 
@@ -139,7 +139,7 @@ export default function MemoryGallery({ onNext }) {
               width: '100%', height: '100%', objectFit: 'cover',
               transformOrigin: 'center center'
             }}
-            onError={(e) => { e.target.src = '/gambar 21.jpeg'; }}
+            onError={(e) => { e.target.src = '/gambar 32.jpeg'; }}
           />
 
           {/* Lightbox Inspect Trigger */}

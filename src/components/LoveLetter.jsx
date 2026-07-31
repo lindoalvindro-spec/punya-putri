@@ -23,99 +23,117 @@ function LetterTab() {
   return (
     <div ref={containerRef} style={{
       background: 'linear-gradient(170deg, #fffdfb 0%, #fff4f7 100%)',
-      padding: '22px 18px', borderRadius: 24,
-      border: '1.5px solid rgba(212,163,89,0.3)', lineHeight: 1.8,
-      fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry)',
-      maxHeight: '50vh', overflowY: 'auto',
+      padding: '24px 20px', borderRadius: 24,
+      border: '1.5px solid rgba(212,163,89,0.35)', lineHeight: 1.85,
+      fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: 'var(--berry)',
+      maxHeight: '52vh', overflowY: 'auto',
       boxShadow: '0 12px 36px rgba(45,16,30,0.08), inset 0 0 25px rgba(255,255,255,0.9)',
       position: 'relative',
     }}>
       {/* Tilted Polaroid Photo with Decorative Tape */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
-        float: 'right', width: 96, height: 96, marginLeft: 14, marginBottom: 10,
-        borderRadius: 16, overflow: 'hidden', border: '4px solid #ffffff',
-        boxShadow: '0 8px 24px rgba(45,16,30,0.18)',
+        float: 'right', width: 98, height: 98, marginLeft: 14, marginBottom: 10,
+        borderRadius: 18, overflow: 'hidden', border: '4px solid #ffffff',
+        boxShadow: '0 10px 28px rgba(45,16,30,0.18)',
         transform: 'rotate(4deg)', position: 'relative',
       }}>
         {/* Subtle Washi Tape Ornament */}
         <div style={{
           position: 'absolute', top: -6, left: '50%', transform: 'translateX(-50%)',
-          width: 36, height: 12, background: 'rgba(212,163,89,0.35)',
+          width: 36, height: 12, background: 'rgba(212,163,89,0.4)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/artis 3.jpeg" alt="Sherly" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          onError={(e) => { e.target.src = '/artis 1.jpeg'; }} />
+        <img src="/gambar 34.jpeg" alt="Dedee" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={(e) => { e.target.src = '/gambar 34.jpeg'; }} />
       </div>
 
-      {/* Opening Greeting Header */}
-      <div ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14 }}>
+      {/* Opening Badge Header */}
+      <div ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 10 }}>
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
-          padding: '4px 12px', borderRadius: 20,
-          background: 'linear-gradient(135deg, rgba(200,59,100,0.1), rgba(212,163,89,0.15))',
-          border: '1px solid rgba(200,59,100,0.2)', marginBottom: 6
+          padding: '4px 14px', borderRadius: 20,
+          background: 'linear-gradient(135deg, rgba(200,59,100,0.12), rgba(212,163,89,0.18))',
+          border: '1px solid rgba(200,59,100,0.25)', marginBottom: 8
         }}>
           <Sparkles size={13} color="var(--pink-deep)" />
-          <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: 'var(--pink-deep)' }}>
+          <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: 'var(--pink-deep)', letterSpacing: '0.5px' }}>
             HAPPY GIRLFRIEND DAY!! 💖✨
           </span>
         </div>
+
+        {/* Romantic Cursive Salutation */}
+        <h3 style={{
+          fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: 'var(--pink-deep)',
+          lineHeight: 1.2, margin: '4px 0 10px 0'
+        }}>
+          Dedee cayaangg,
+        </h3>
       </div>
 
       {/* Paragraph 1 */}
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
-        Happy Girlfriend Day, Sherly! 🌸 Terima kasih ya udah selalu hadir, nemenin hari-hariku, dan bikin hidup aku jadi jauh lebih berwarna. I feel so incredibly lucky to have you by my side. 💕
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500, letterSpacing: '0.2px' }}>
+        di hariii spesiaall iniiiyy dilgaa cumaaa mauuu bilanggg telimakacihhh  yannggg sebesarrr besarrrnaaa. Telimakacihhh kalnaaa cudaa hadir di hidup dilgaaa,dedee bawaa banyaaaa kehangatan buattt dilgaaa,dan sayangiii dilgaa dengan tulus apaaa adanaaaa.
       </p>
 
-      {/* Paragraph 2 */}
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18 }}>
-        Setiap momen sama kamu itu selalu spesial. Dari hal-hal kecil, senyuman manis kamu, bercandaan kita, sampai obrolan random tiap hari, semuanya bikin aku bersyukur banget bisa milikin kamu. ✨
+      {/* Paragraph 2 (Dikeluarkan dari quote box) */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16, fontWeight: 500 }}>
+        Kadang dilgaaa masih ndaaa nyangkaaa bicaa punyaaa perempuan sebaik dan sesabaaarr dedeee. Di saat dilgaaa capee sama duniaa dilgaa, dedee selalu jadi tempat paliingggg nyaman buattt pulang.
       </p>
 
-      {/* 🌟 Romantic Quote Card */}
+      {/* 🌟 Romantic Quote Highlight Box (Teks Baru) */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
-        margin: '20px 0',
-        padding: '18px 18px',
+        margin: '18px 0',
+        padding: '16px 18px',
         borderRadius: 20,
         background: 'linear-gradient(135deg, rgba(255, 245, 248, 0.95) 0%, rgba(255, 250, 242, 0.95) 100%)',
-        border: '1px solid rgba(244, 151, 181, 0.35)',
-        boxShadow: '0 8px 24px rgba(200,59,100,0.06), inset 0 0 15px rgba(255,255,255,0.8)',
+        border: '1.5px solid rgba(244, 151, 181, 0.4)',
+        boxShadow: '0 8px 24px rgba(200,59,100,0.08), inset 0 0 15px rgba(255,255,255,0.8)',
         position: 'relative',
         overflow: 'hidden',
       }}>
         <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-          <Quote size={22} color="var(--pink-deep)" style={{ transform: 'rotate(180deg)', flexShrink: 0, marginTop: 2, opacity: 0.8 }} />
+          <Quote size={22} color="var(--pink-deep)" style={{ transform: 'rotate(180deg)', flexShrink: 0, marginTop: 2, opacity: 0.85 }} />
           <p style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '0.85rem',
+            fontSize: '0.86rem',
             fontStyle: 'italic',
             color: 'var(--berry)',
-            lineHeight: 1.7,
-            fontWeight: 500,
+            lineHeight: 1.75,
+            fontWeight: 600,
           }}>
-            "Being with you feels like home. Aku selalu berharap kamu bisa terus bahagia, merasa dicintai, dan selalu nyaman jadi diri kamu sendiri di samping aku. I'll always be here to support you in every step you take."
+            "Being with you feels like home. Dilgaaa selalu berharap bebee bisaaa teyuss bahagiaa yaaa, merasaaa dicintai, dan selalu nyamaann jadi diri bebee sendiri di samping dilgaaa. I'll always be here to support you in every step you take."
           </p>
         </div>
       </div>
 
       {/* Paragraph 3 */}
-      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
-        Semoga hari ini dan hari-hari ke depannya, senyuman kamu makin bersinar. Always take care, stay safe, stay happy, and stay with me forever! 💖
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
+        Dilgaa beruntung buangeettt bisa memiliki dedeee di sisi dilgaaa .
+      </p>
+
+      {/* Paragraph 4 */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
+        Semoga hariii ini dan hari hari ke depaannaa, senyuman  dedee semakinnn bersinar. Always take care, stay safe, stay happy, and stay with me forever! 💝
+      </p>
+
+      {/* Paragraph 5 */}
+      <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18, fontWeight: 500 }}>
+        Happy Girlfriend Day, kecayangaann  dilgaaa. Tetap jadiyy rumah buat buatt dilgaa kapann punn yaaa.
       </p>
 
       {/* Handwritten Sign-Off Card */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
-        marginTop: 22, padding: '14px 16px',
-        background: 'linear-gradient(135deg, #ffffff 0%, #fff7f9 100%)',
-        borderRadius: 18, border: '1.5px solid rgba(212,163,89,0.25)',
-        textAlign: 'center', boxShadow: '0 4px 16px rgba(45,16,30,0.05)',
+        marginTop: 22, padding: '16px 18px',
+        background: 'linear-gradient(135deg, #ffffff 0%, #fff5f8 100%)',
+        borderRadius: 20, border: '1.5px solid rgba(212,163,89,0.3)',
+        textAlign: 'center', boxShadow: '0 6px 20px rgba(45,16,30,0.06)',
         clear: 'both',
       }}>
         <p style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.25rem', color: 'var(--pink-deep)',
-          lineHeight: 1.3, margin: 0
+          fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: 'var(--pink-deep)',
+          lineHeight: 1.35, margin: 0, fontWeight: 700
         }}>
-          Happy Girlfriend Day, Sherly! I love you today, tomorrow, and forever. 😊🌸✨
+          Happy Girlfriend Day, bebee! I love you today, tomorrow, and forever. 😻🫂💝
         </p>
       </div>
     </div>
@@ -142,31 +160,31 @@ function ImpianTab() {
 
   const dreams = [
     {
-      icon: '🌸',
+      icon: '🌷',
       badge: 'DREAM 01',
-      title: 'Selalu Bahagia Bersama',
-      text: 'Bisa terus ngelewatin banyak hari indah bareng kamu, saling melengkapi, dan ngerayain setiap momen bahagia bersama.',
+      title: 'Selalu Bahagia Bareng',
+      text: 'Bicaa teyusss lewatiinn banyaaaaa hari indah bareng dedeee, saling melangkaapii, dan ngerayaiinn setiap momen bahagiaa kitaa bersamaaa.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.18), rgba(248,164,190,0.25))',
     },
     {
-      icon: '🌿',
+      icon: '🌹',
       badge: 'DREAM 02',
       title: 'Saling Support & Tumbuh',
-      text: 'Saling dukung setiap impian dan cita-cita kamu, tumbuh jadi pribadi yang lebih baik, dan selalu jadi tempat kamu pulang.',
+      text: 'Saling dukuungg setiaapp  impian dan citaaa citaaa dedeee, tumbuh jadiii pribadiii yang lebih baiikkk,dan selalu jadiii tempat dedee pulangg.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
-      icon: '🌅',
+      icon: '🌻',
       badge: 'DREAM 03',
       title: 'Petualangan & Kenangan Indah',
-      text: 'Bikin lebih banyak kenangan manis bersama, jalan-jalan ke tempat impian kita, dan menikmati setiap momen indah bareng kamu.',
+      text: 'Bikin lebiihh banyaaa kenangaann manis bareengg, jalaaan jalan ke tempaatt impiaann kita, daan nikmatiii  setiaap momennn indah barengg dedeee.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(255,245,248,0.4))',
     },
     {
       icon: '💍',
       badge: 'DREAM 04',
       title: 'Masa Depan Indah ✨',
-      text: 'Menjaga hubungan ini dengan penuh kasih sayang, rasa saling percaya, dan kehangatan yang selalu ada setiap harinya.',
+      text: 'jagainnn hubungan iniyy dengan penuhhh kasiihh cayaangg, rasaa salingg percayaaa, dan kehangataannn yangg selaluu ada setiapp harinaaaa.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
@@ -184,10 +202,6 @@ function ImpianTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
         }}>Impian Bersama 💫</h4>
-        <p style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)',
-          fontWeight: 600, marginTop: 2
-        }}>Poin harapan manis untuk perjalanan kita</p>
       </div>
 
       {dreams.map((item, i) => (
@@ -278,11 +292,11 @@ function WishesTab() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span><b>Semoga kamu selalu sehat, bahagia,</b> dan dilindungi di mana pun kamu berada. 💖</span>,
-          <span><b>May your beautiful smile</b> always brighten up every single day! 😊</span>,
-          <span><b>Semoga semua cita-cita dan impian Sherly</b> bisa tercapai satu per satu! 🌟</span>,
-          <span><b>Semoga hubungan kita makin erat,</b> penuh kasih sayang, dan selalu harmonis. 💑</span>,
-          <span><b>Terima kasih sudah jadi pasangan terbaik</b> dan selalu ada untuk aku! 💍✨</span>
+          <span>Semogaa bebee selaluuu sehatt bahagiyaaa, dan dilindungii di manaaa punn bebee berada💝</span>,
+          <span>May your beautiful smile always brighten up every single day! 😽</span>,
+          <span>Semoga semuuaa citaa citaaa dan impian bebeeee bicaaa tercapaii satuu per satuu yaa🫶🏻</span>,
+          <span>Semoga hubungaann kitaaa semakinnn erat, penuhh kasihh cayaangg, dan selalu bahagiaaa. 💋</span>,
+          <span>Telimakacihhhh cudaaa jadi perempuaann yangg paling berartiii buatt dilgaa setelah hadirnaa mamaa dan telimakacihh jugaaa selalu adaaa buaatt dilgaa! 🫂❤️🩹</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
@@ -381,7 +395,7 @@ export default function LoveLetter({ onNext }) {
           }}>Surat Girlfriend Day</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Sherly 💖</p>
+          }}>Untuk Bebee 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
@@ -410,7 +424,7 @@ export default function LoveLetter({ onNext }) {
             }}>Happy Girlfriend Day! ✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
-            }}>Pesan & Dedikasi Spesial Untuk Sherly 🌸</p>
+            }}>pesannn dan harapan dilgaa buat kakaa 🌸</p>
           </div>
 
           {/* Navigation */}
