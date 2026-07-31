@@ -4,6 +4,7 @@ import SplashScreen from './components/SplashScreen';
 import PinScreen from './components/PinScreen';
 import PuzzleScreen from './components/PuzzleScreen';
 import LoveLetter from './components/LoveLetter';
+import FlowerScreen from './components/FlowerScreen';
 import BirthdayCake from './components/BirthdayCake';
 import MemoryGallery from './components/MemoryGallery';
 import BirthdayWishCard from './components/BirthdayWishCard';
@@ -42,7 +43,7 @@ function FloatingHearts() {
 }
 
 export default function App() {
-  // Flow: splash → pin → puzzle → letter → cake → gallery → wishcard
+  // Flow: splash → pin → puzzle → letter → flower → cake → gallery → wishcard
   const [stage, setStage] = useState('splash');
   const stageRef = useRef(null);
 
@@ -95,7 +96,10 @@ export default function App() {
           <PuzzleScreen onComplete={() => transitionTo('letter')} />
         )}
         {stage === 'letter' && (
-          <LoveLetter onNext={() => transitionTo('cake')} />
+          <LoveLetter onNext={() => transitionTo('flower')} />
+        )}
+        {stage === 'flower' && (
+          <FlowerScreen onNext={() => transitionTo('cake')} />
         )}
         {stage === 'cake' && (
           <BirthdayCake onShowGallery={() => transitionTo('gallery')} />

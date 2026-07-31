@@ -449,7 +449,7 @@ export default function LoveLetter({ onNext }) {
 
           {/* CTA Button */}
           <button className="btn-primary" onClick={onNext} style={{ width: '100%', marginTop: 20 }}>
-            Lanjut ke Tiup Lilin! 🎂 <ArrowRight size={16} />
+            Buka Bunga Spesial! 🌸 <ArrowRight size={16} />
           </button>
         </div>
       )}
