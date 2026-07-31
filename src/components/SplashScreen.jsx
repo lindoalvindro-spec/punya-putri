@@ -195,7 +195,7 @@ export default function SplashScreen({ onStart }) {
           lineHeight: 1.1, marginBottom: 12, opacity: 0,
           textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          My Favorite Girl 👑
+          Sherly 👑
         </h1>
 
         <p ref={line3Ref} style={{

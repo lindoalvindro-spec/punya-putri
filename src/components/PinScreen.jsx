@@ -90,7 +90,7 @@ export default function PinScreen({ onUnlock }) {
           fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)',
           textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.9,
         }}>
-          Masukkan PIN tanggal lahir Nazwa Amelia 💕
+          Masukkan PIN rahasia Sherly 💕
         </p>
 
         {/* PIN Dots */}

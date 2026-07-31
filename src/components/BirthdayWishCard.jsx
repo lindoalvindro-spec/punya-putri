@@ -132,7 +132,7 @@ export default function BirthdayWishCard({ onRestart }) {
                 fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                My Favorite Girl 💖
+                Sherly 💖
               </h1>
             </div>
 
@@ -155,7 +155,7 @@ export default function BirthdayWishCard({ onRestart }) {
                 With Endless Love & Appreciation
               </p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
-                Happy Girlfriend Day! 🌸💖
+                Happy Girlfriend Day, Sherly! 🌸💖
               </p>
             </div>
 

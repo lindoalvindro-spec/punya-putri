@@ -194,7 +194,7 @@ function ImpianTab() {
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)',
           fontWeight: 600, marginTop: 2
-        }}>Poin doa istimewa untuk perjalanan Nazwa</p>
+        }}>Poin doa istimewa untuk perjalanan Sherly</p>
       </div>
 
       {dreams.map((item, i) => (
@@ -385,10 +385,10 @@ export default function LoveLetter({ onNext }) {
 
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--berry)', marginBottom: 6,
-          }}>Surat Ulang Tahun</h2>
+          }}>Surat Girlfriend Day</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Nazwa Amelia (Sarah) 💖</p>
+          }}>Untuk Sherly 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
@@ -414,10 +414,10 @@ export default function LoveLetter({ onNext }) {
             <h1 style={{
               fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--pink-deep)',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Selamat Ulang Tahun! ✨</h1>
+            }}>Happy Girlfriend Day! ✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
-            }}>Pesan & Doa Spesial Untuk Nazwa Amelia 🌸</p>
+            }}>Pesan & Dedikasi Spesial Untuk Sherly 🌸</p>
           </div>
 
           {/* Navigation */}
