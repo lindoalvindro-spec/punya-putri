@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Heart, ArrowRight, Sparkles, Quote } from 'lucide-react';
 import gsap from 'gsap';
 
-// ─── 💌 Tab 1: Surat Content (High-End Aesthetic Letter) ───
+// ─── 💌 Tab 1: Surat Content (High-End Romantic Letter for Girlfriend) ───
 function LetterTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -43,7 +43,7 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(212,163,89,0.35)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/artis 3.jpeg" alt="Girlfriend Day" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <img src="/artis 3.jpeg" alt="Sherly" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           onError={(e) => { e.target.src = '/artis 1.jpeg'; }} />
       </div>
 
@@ -64,15 +64,15 @@ function LetterTab() {
 
       {/* Paragraph 1 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
-        Ihhh udah tua nihh :( Setiap tahun berlalu cepet banget yaa. Tapi kamu keren banget deh, masih bisa bertahan disini ngerayain ultah kamu yang ke sekian! Aku bangga sama kamuuu. 💕
+        Happy Girlfriend Day, Sherly! 🌸 Terima kasih ya udah selalu hadir, nemenin hari-hariku, dan bikin hidup aku jadi jauh lebih berwarna. I feel so incredibly lucky to have you by my side. 💕
       </p>
 
       {/* Paragraph 2 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18 }}>
-        For the wishes, I hope you'll stay till old age, bakal bisa lebih bahagia, lebih aktif, lebih fresh to a new year. Jadi lebih deket to success, bisa bikin orang terdekat kamu bangga! ✨
+        Setiap momen sama kamu itu selalu spesial. Dari hal-hal kecil, senyuman manis kamu, bercandaan kita, sampai obrolan random tiap hari, semuanya bikin aku bersyukur banget bisa milikin kamu. ✨
       </p>
 
-      {/* 🌟 Elegant Organic Quote Card (Anti-AI-Slop Redesign) */}
+      {/* 🌟 Romantic Quote Card */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
         margin: '20px 0',
         padding: '18px 18px',
@@ -83,13 +83,6 @@ function LetterTab() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        {/* Ambient Glow Accent */}
-        <div style={{
-          position: 'absolute', top: -20, right: -20, width: 80, height: 80,
-          borderRadius: '50%', background: 'radial-gradient(circle, rgba(212,163,89,0.2) 0%, transparent 70%)',
-          pointerEvents: 'none'
-        }} />
-
         <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
           <Quote size={22} color="var(--pink-deep)" style={{ transform: 'rotate(180deg)', flexShrink: 0, marginTop: 2, opacity: 0.8 }} />
           <p style={{
@@ -100,14 +93,14 @@ function LetterTab() {
             lineHeight: 1.7,
             fontWeight: 500,
           }}>
-            Tapi first thing first yang paling penting, diri kamu sendiri. Kamu harus bisa ngadepin tanggung jawab yang jauh lebih besar setiap tahunnya. Harus bisa menghadapi rintangan lain yang bakal ada di depan kamu, menerima diri kamu far before everyone else does. Karena, kamu harus lebih nyaman sama diri kamu sekarang!
+            "Being with you feels like home. Aku selalu berharap kamu bisa terus bahagia, merasa dicintai, dan selalu nyaman jadi diri kamu sendiri di samping aku. I'll always be here to support you in every step you take."
           </p>
         </div>
       </div>
 
       {/* Paragraph 3 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16 }}>
-        You'll face more years to come, meaning more challenges and surprise along! Dengan hadiahnya juga disana. Always take care, stay safe, stay happy, stay healthy. 💖
+        Semoga hari ini dan hari-hari ke depannya, senyuman kamu makin bersinar. Always take care, stay safe, stay happy, and stay with me forever! 💖
       </p>
 
       {/* Handwritten Sign-Off Card */}
@@ -122,7 +115,7 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.25rem', color: 'var(--pink-deep)',
           lineHeight: 1.3, margin: 0
         }}>
-          Happy birthday, again. May you have the biggest smile plastered specially today! 😊🌸✨
+          Happy Girlfriend Day, Sherly! I love you today, tomorrow, and forever. 😊🌸✨
         </p>
       </div>
     </div>
@@ -149,31 +142,31 @@ function ImpianTab() {
 
   const dreams = [
     {
-      icon: '🌱',
-      badge: 'HARAPAN 01',
-      title: 'Stay Fresh & Happy',
-      text: 'I hope you\'ll stay till old age, bakal bisa lebih bahagia, lebih aktif, dan selalu fresh menyambut setiap tahun yang baru.',
+      icon: '🌸',
+      badge: 'DREAM 01',
+      title: 'Selalu Bahagia Bersama',
+      text: 'Bisa terus ngelewatin banyak hari indah bareng kamu, saling melengkapi, dan ngerayain setiap momen bahagia bersama.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.18), rgba(248,164,190,0.25))',
     },
     {
-      icon: '🌅',
-      badge: 'HARAPAN 02',
-      title: 'Diri Kamu Sendiri & Kenyamanan',
-      text: 'Menerima diri kamu far before everyone else does, karena kamu harus lebih nyaman sama diri kamu sekarang!',
+      icon: '🌿',
+      badge: 'DREAM 02',
+      title: 'Saling Support & Tumbuh',
+      text: 'Saling dukung setiap impian dan cita-cita kamu, tumbuh jadi pribadi yang lebih baik, dan selalu jadi tempat kamu pulang.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
-      icon: '✨',
-      badge: 'HARAPAN 03',
-      title: 'Success & Big Smile',
-      text: 'Jadi lebih deket to success, bikin orang terdekat bangga, and may you have the biggest smile plastered specially today!',
+      icon: '🌅',
+      badge: 'DREAM 03',
+      title: 'Petualangan & Kenangan Indah',
+      text: 'Bikin lebih banyak kenangan manis bersama, jalan-jalan ke tempat impian kita, dan menikmati setiap momen indah bareng kamu.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(255,245,248,0.4))',
     },
     {
       icon: '💍',
-      badge: 'HARAPAN 04 (SPESIAL)',
-      title: 'Dipertemukan Pasangan Terbaik ✨',
-      text: 'Semoga secepatnya dipertemukan dengan jodoh & pasangan terbaik yang siap menemani hari-harimu (biar gak single lama-lama lagi wkwk)! 💖',
+      badge: 'DREAM 04',
+      title: 'Masa Depan Indah ✨',
+      text: 'Menjaga hubungan ini dengan penuh kasih sayang, rasa saling percaya, dan kehangatan yang selalu ada setiap harinya.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
@@ -190,11 +183,11 @@ function ImpianTab() {
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Harapan Utama 💫</h4>
+        }}>Impian Bersama 💫</h4>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)',
           fontWeight: 600, marginTop: 2
-        }}>Poin doa istimewa untuk perjalanan Sherly</p>
+        }}>Poin harapan manis untuk perjalanan kita</p>
       </div>
 
       {dreams.map((item, i) => (
@@ -280,16 +273,16 @@ function WishesTab() {
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Special Birthday Wishes ✨</h4>
+        }}>Special Wishes For You ✨</h4>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span><b>Always take care, stay safe, stay happy, stay healthy.</b> 💖</span>,
-          <span><b>May you have the biggest smile</b> plastered specially today! 😊</span>,
-          <span><b>You'll face more years to come</b>, with more challenges, surprises, and rewards along! 🎁</span>,
-          <span><b>Aku bangga sama kamuuu</b>, kamu keren banget masih bisa bertahan & ngerayain ultah kamu! 🌟</span>,
-          <span><b>Semoga segera dipertemukan sama pasangannya</b>, biar gak single lama-lama lagi yaaa (kasian deh wkwk) ditunggu kabar bahagianya! 💍✨</span>
+          <span><b>Semoga kamu selalu sehat, bahagia,</b> dan dilindungi di mana pun kamu berada. 💖</span>,
+          <span><b>May your beautiful smile</b> always brighten up every single day! 😊</span>,
+          <span><b>Semoga semua cita-cita dan impian Sherly</b> bisa tercapai satu per satu! 🌟</span>,
+          <span><b>Semoga hubungan kita makin erat,</b> penuh kasih sayang, dan selalu harmonis. 💑</span>,
+          <span><b>Terima kasih sudah jadi pasangan terbaik</b> dan selalu ada untuk aku! 💍✨</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
