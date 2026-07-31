@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { Download, RotateCcw, Sparkles, Crown } from 'lucide-react';
+import { Download, RotateCcw, Sparkles, Crown, ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import confetti from 'canvas-confetti';
 
-export default function BirthdayWishCard({ onRestart }) {
+export default function BirthdayWishCard({ onNext, onRestart }) {
   const cardRef = useRef(null);
   const frameRef = useRef(null);
 
@@ -174,8 +174,12 @@ export default function BirthdayWishCard({ onRestart }) {
             <Download size={14} /> Screenshot kartu ini untuk disimpan ya! 📸
           </p>
 
+          <button className="btn-primary" onClick={onNext} style={{ width: '100%', padding: '15px 20px', fontSize: '0.92rem', marginBottom: 6 }}>
+            Buka Buket Bunga Spesial! 💐 <ArrowRight size={16} />
+          </button>
+
           <button className="btn-ghost" onClick={onRestart} style={{ 
-            marginTop: 4, padding: '10px 20px', background: 'rgba(255,255,255,0.7)',
+            padding: '10px 20px', background: 'rgba(255,255,255,0.7)',
             borderRadius: 20, color: 'var(--berry)'
           }}>
             <RotateCcw size={14} /> Ulangi Kejutan Pameran

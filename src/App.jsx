@@ -43,7 +43,7 @@ function FloatingHearts() {
 }
 
 export default function App() {
-  // Flow: splash → pin → puzzle → letter → flower → cake → gallery → wishcard
+  // Flow: splash → pin → puzzle → letter → cake → gallery → wishcard → flower
   const [stage, setStage] = useState('splash');
   const stageRef = useRef(null);
 
@@ -96,10 +96,7 @@ export default function App() {
           <PuzzleScreen onComplete={() => transitionTo('letter')} />
         )}
         {stage === 'letter' && (
-          <LoveLetter onNext={() => transitionTo('flower')} />
-        )}
-        {stage === 'flower' && (
-          <FlowerScreen onNext={() => transitionTo('cake')} />
+          <LoveLetter onNext={() => transitionTo('cake')} />
         )}
         {stage === 'cake' && (
           <BirthdayCake onShowGallery={() => transitionTo('gallery')} />
@@ -108,7 +105,10 @@ export default function App() {
           <MemoryGallery onNext={() => transitionTo('wishcard')} />
         )}
         {stage === 'wishcard' && (
-          <BirthdayWishCard onRestart={() => transitionTo('splash')} />
+          <BirthdayWishCard onNext={() => transitionTo('flower')} onRestart={() => transitionTo('splash')} />
+        )}
+        {stage === 'flower' && (
+          <FlowerScreen onRestart={() => transitionTo('splash')} />
         )}
       </div>
 

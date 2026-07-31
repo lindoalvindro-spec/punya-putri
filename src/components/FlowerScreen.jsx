@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ArrowRight, Sparkles, RotateCw, Heart } from 'lucide-react';
 import gsap from 'gsap';
 
-export default function FlowerScreen({ onNext }) {
+export default function FlowerScreen({ onRestart }) {
   const [landscapeMode, setLandscapeMode] = useState(false);
   const containerRef = useRef(null);
   const cardRef = useRef(null);
@@ -234,10 +234,10 @@ export default function FlowerScreen({ onNext }) {
           </div>
         </div>
 
-        {/* CTA Next Button */}
+        {/* CTA Restart Button */}
         <button
           className="btn-primary"
-          onClick={onNext}
+          onClick={onRestart}
           style={{
             width: '100%',
             marginTop: 18,
@@ -245,7 +245,7 @@ export default function FlowerScreen({ onNext }) {
             fontSize: '0.9rem',
           }}
         >
-          Lanjut ke Tiup Lilin! 🎂 <ArrowRight size={16} />
+          Ulangi Kejutan Pameran 🔄
         </button>
       </div>
 
