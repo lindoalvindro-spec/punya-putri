@@ -127,13 +127,14 @@ export default function SpotifyPlayer() {
 
   return (
     <div style={{
-      position: 'fixed', bottom: 12, left: '50%', transform: 'translateX(-50%)',
-      zIndex: 999, width: '92%', maxWidth: expanded ? 410 : 'max-content',
+      position: 'fixed', bottom: 14, left: 0, right: 0, margin: '0 auto',
+      zIndex: 99999, width: '92%', maxWidth: expanded ? 410 : 'max-content',
+      display: 'flex', justifyContent: 'center',
     }}>
       {/* Audio Element */}
       <audio
         ref={audioRef}
-        src="/bgm.mp3"
+        src="/THANK YOU 4 LOVIN' ME_spotdown.org.mp3"
         preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
@@ -171,10 +172,10 @@ export default function SpotifyPlayer() {
             border: '1.5px solid #1DB954',
           }}>
             <img
-              src="/foto-lagu.jpg"
-              alt="not a lot, just forever"
+              src="/gambar saul.jpg"
+              alt="Thank You 4 Lovin' Me"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onError={(e) => { e.target.src = '/artworks-8kl4gY2gl0wW-0-t1080x1080.webp'; }}
+              onError={(e) => { e.target.src = '/gambar saul.jpg'; }}
             />
             {playing && (
               <div className="anim-spin" style={{
@@ -192,7 +193,7 @@ export default function SpotifyPlayer() {
               fontSize: '0.78rem', fontWeight: 700, color: '#ffffff',
               lineHeight: 1.1, whiteSpace: 'nowrap'
             }}>
-              not a lot, just forever
+              Thank You 4 Lovin' Me
             </div>
             <div style={{
               fontSize: '0.66rem', color: '#1DB954', fontWeight: 600,
@@ -265,10 +266,10 @@ export default function SpotifyPlayer() {
             background: '#282828',
           }}>
             <img
-              src="/foto-lagu.jpg"
-              alt="not a lot, just forever - Adrianne Lenker"
+              src="/gambar saul.jpg"
+              alt="Thank You 4 Lovin' Me"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onError={(e) => { e.target.src = '/artworks-8kl4gY2gl0wW-0-t1080x1080.webp'; }}
+              onError={(e) => { e.target.src = '/gambar saul.jpg'; }}
             />
             {playing && (
               <div style={{
@@ -292,13 +293,13 @@ export default function SpotifyPlayer() {
                   whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
                   letterSpacing: '-0.2px'
                 }}>
-                  not a lot, just forever
+                  Thank You 4 Lovin' Me
                 </div>
                 <div style={{
                   fontSize: '0.74rem', color: '#b3b3b3', fontWeight: 500,
                   whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: 1
                 }}>
-                  Adrianne Lenker
+                  Paul Partohap
                 </div>
               </div>
 
