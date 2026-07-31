@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100" width="1000" height="1100">
+  
+    <defs>
+      <!-- Background Gradient -->
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff4f7" />
+        <stop offset="50%" stop-color="#fce8ef" />
+        <stop offset="100%" stop-color="#f8d7e3" />
+      </linearGradient>
+
+      <!-- Heart Frame Gradient -->
+      <linearGradient id="heartFrameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff3366" />
+        <stop offset="50%" stop-color="#ff5277" />
+        <stop offset="100%" stop-color="#c9184a" />
+      </linearGradient>
+
+      <!-- QR Module Color -->
+      <linearGradient id="qrDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#800f2f" />
+        <stop offset="100%" stop-color="#a4133c" />
+      </linearGradient>
+
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#ff3366" flood-opacity="0.3" />
+      </filter>
+
+      <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.12" />
+      </filter>
+    </defs>
+
+    <!-- Outer Rounded Card -->
+    <rect x="30" y="30" width="940" height="1040" rx="48" fill="url(#bgGrad)" stroke="#ffb3c1" stroke-width="4" filter="url(#cardShadow)" />
+  
+
+    <g filter="url(#shadow)">
+      <!-- Outer Heart Glow Border -->
+      <path d="M 500 890 C 500 890, 120 570, 120 370 C 120 210, 270 170, 500 330 C 730 170, 880 210, 880 370 C 880 570, 500 890, 500 890 Z" fill="#ffffff" stroke="url(#heartFrameGrad)" stroke-width="16" stroke-linejoin="round" />
+    </g>
+  
+
+    <g filter="url(#shadow)">
+      <rect x="260" y="70" width="480" height="70" rx="35" fill="url(#heartFrameGrad)" />
+      <text x="500" y="113" font-family="'Fredoka', 'Quicksand', sans-serif" font-weight="bold" font-size="26" fill="#ffffff" text-anchor="middle">Happy Girlfriend Day 💖</text>
+    </g>
+  
+
+    <rect x="170" y="190" width="660" height="660" rx="32" fill="#ffffff" stroke="#ffccd5" stroke-width="3" filter="url(#cardShadow)" />
+  
+<circle cx="354.05" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="228.11" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="244.32" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="260.54" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="276.76" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="292.97" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="309.19" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="325.41" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="341.62" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="357.84" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="374.05" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="390.27" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="406.49" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="422.70" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="438.92" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="455.14" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="471.35" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="487.57" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="503.78" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="520.00" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="536.22" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="552.43" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="568.65" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="584.86" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="601.08" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="617.30" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="289.19" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="633.51" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="224.32" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="256.76" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="649.73" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="240.54" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="321.62" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="665.95" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="208.11" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="272.97" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="305.41" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="682.16" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="698.38" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="714.59" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="613.51" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="730.81" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="581.08" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="747.03" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="337.84" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="629.73" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="763.24" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="483.78" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="500.00" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="564.86" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="710.81" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="779.46" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="516.22" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="532.43" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="645.95" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="678.38" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="759.46" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="775.68" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="795.68" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="354.05" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="370.27" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="386.49" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="402.70" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="418.92" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="435.14" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="451.35" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="467.57" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="548.65" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="597.30" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="662.16" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="694.59" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="727.03" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="743.24" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<circle cx="791.89" cy="811.89" r="7.14" fill="url(#qrDarkGrad)" />
+<rect x="200" y="220" width="113.51351351351352" height="113.51351351351352" rx="24.972972972972972" fill="url(#qrDarkGrad)" />
+<rect x="216.21621621621622" y="236.21621621621622" width="81.08108108108108" height="81.08108108108108" rx="18.16216216216216" fill="#ffffff" />
+<rect x="232.43243243243245" y="252.43243243243245" width="48.648648648648646" height="48.648648648648646" rx="13.621621621621621" fill="url(#heartFrameGrad)" />
+<rect x="686.4864864864865" y="220" width="113.51351351351352" height="113.51351351351352" rx="24.972972972972972" fill="url(#qrDarkGrad)" />
+<rect x="702.7027027027027" y="236.21621621621622" width="81.08108108108108" height="81.08108108108108" rx="18.16216216216216" fill="#ffffff" />
+<rect x="718.9189189189188" y="252.43243243243245" width="48.648648648648646" height="48.648648648648646" rx="13.621621621621621" fill="url(#heartFrameGrad)" />
+<rect x="200" y="706.4864864864865" width="113.51351351351352" height="113.51351351351352" rx="24.972972972972972" fill="url(#qrDarkGrad)" />
+<rect x="216.21621621621622" y="722.7027027027027" width="81.08108108108108" height="81.08108108108108" rx="18.16216216216216" fill="#ffffff" />
+<rect x="232.43243243243245" y="738.9189189189188" width="48.648648648648646" height="48.648648648648646" rx="13.621621621621621" fill="url(#heartFrameGrad)" />
+
+    <g filter="url(#shadow)">
+      <circle cx="500" cy="520" r="56.75675675675676" fill="#ffffff" stroke="#ff3366" stroke-width="4" />
+      <text x="500" y="522" font-size="62.43243243243244" text-anchor="middle" dominant-baseline="middle">💕</text>
+    </g>
+  
+
+    <text x="500" y="905" font-family="'Fredoka', 'Quicksand', sans-serif" font-weight="bold" font-size="36" fill="#c9184a" text-anchor="middle">Scan Me 💕</text>
+    <text x="500" y="950" font-family="sans-serif" font-weight="600" font-size="22" fill="#ff5277" text-anchor="middle">bebeebgirlfriendday.netlify.app</text>
+  
+</svg>

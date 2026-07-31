@@ -156,7 +156,7 @@ export default function FlowerScreen({ onRestart }) {
             }}
           >
             <img
-              src="/bunga%20bucket%20no%20bg.png"
+              src="/bucket%20bunga%202%20no%20bg.png"
               alt="Flowers for my Pretty Girl"
               style={{
                 width: '100%',
@@ -165,7 +165,7 @@ export default function FlowerScreen({ onRestart }) {
                 objectFit: 'contain',
                 filter: 'drop-shadow(0 12px 28px rgba(200, 59, 100, 0.28))',
               }}
-              onError={(e) => { e.target.src = '/bunga no bg.png'; }}
+              onError={(e) => { e.target.src = '/bunga%20buket%202%20no%20bg.png'; }}
             />
           </div>
 
