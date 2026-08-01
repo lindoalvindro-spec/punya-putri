@@ -119,7 +119,7 @@ export default function SplashScreen({ onStart }) {
       <img
         ref={photoRef}
         src="/gambar 61.jpg"
-        alt="Happy Birthday Nada"
+        alt="Happy Birthday Sayangku"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
@@ -176,7 +176,7 @@ export default function SplashScreen({ onStart }) {
             fontFamily: 'var(--font-cute)', fontSize: '0.72rem', fontWeight: 700,
             color: 'var(--gold-light)', letterSpacing: '1.5px', textTransform: 'uppercase',
           }}>
-            Happy Birthday Nada 🎂💖
+            Happy Birthday Sayangku 🎂💖
           </span>
         </div>
 
@@ -195,7 +195,7 @@ export default function SplashScreen({ onStart }) {
           lineHeight: 1.1, marginBottom: 12, opacity: 0,
           textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          Nada 👑
+          Sayangku 👑
         </h1>
 
         <p ref={line3Ref} style={{

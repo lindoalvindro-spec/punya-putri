@@ -88,12 +88,12 @@ export default function MemoryGallery({ onNext }) {
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Nada’s Photo Gallery 🌸
+          Sayangku’s Photo Gallery 🌸
         </h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: 'var(--rose-gold)', fontWeight: 600,
         }}>
-          Delapan potret keindahan & keceriaan Nada ✨
+          Delapan potret keindahan & keceriaan Sayangku ✨
         </p>
       </div>
 

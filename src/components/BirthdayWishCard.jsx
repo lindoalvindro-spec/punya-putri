@@ -132,7 +132,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                Nada 💖
+                Sayangku 💖
               </h1>
             </div>
 
@@ -155,7 +155,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 With Endless Love & Appreciation
               </p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
-                Happy Birthday, Nada! 🎂🌸💖
+                Happy Birthday, Sayangku! 🎂🌸💖
               </p>
             </div>
 

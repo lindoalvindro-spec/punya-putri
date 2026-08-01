@@ -43,7 +43,7 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(212,163,89,0.4)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/gambar 34.jpeg" alt="Nada" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <img src="/gambar 34.jpeg" alt="Sayangku" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           onError={(e) => { e.target.src = '/gambar 34.jpeg'; }} />
       </div>
 
@@ -66,7 +66,7 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: 'var(--pink-deep)',
           lineHeight: 1.2, margin: '4px 0 10px 0'
         }}>
-          Dearest Nada,
+          Dearest Sayangku,
         </h3>
       </div>
 
@@ -101,7 +101,7 @@ function LetterTab() {
             lineHeight: 1.75,
             fontWeight: 600,
           }}>
-            "Being with you feels like home. Aku selalu berdoa agar di usiamu yang baru ini, Nada bisa terus tumbuh dengan penuh kebahagiaan, merasa sangat dicintai setiap hari, dan selalu nyaman menjadi diri sendiri. I'll always be right here, standing by your side in every step of your journey."
+            "Being with you feels like home. Aku selalu berdoa agar di usiamu yang baru ini, sayangku bisa terus tumbuh dengan penuh kebahagiaan, merasa sangat dicintai setiap hari, dan selalu nyaman menjadi diri sendiri. I'll always be right here, standing by your side in every step of your journey."
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: 'var(--pink-deep)',
           lineHeight: 1.35, margin: 0, fontWeight: 700
         }}>
-          Happy Birthday, Nada! I love you today, tomorrow, and for all the years to come. 🎂✨💖
+          Happy Birthday, Sayangku! I love you today, tomorrow, and for all the years to come. 🎂✨💖
         </p>
       </div>
     </div>
@@ -170,7 +170,7 @@ function ImpianTab() {
       icon: '🌟',
       badge: 'DREAM 02',
       title: 'Always Supporting Your Growth',
-      text: 'Selalu ada di garda terdepan untuk mendukung setiap impian, karir, dan cita-cita Nada. I will always be your biggest cheerleader.',
+      text: 'Selalu ada di garda terdepan untuk mendukung setiap impian, karir, dan cita-cita sayangku. I will always be your biggest cheerleader.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
@@ -292,9 +292,9 @@ function WishesTab() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span>Semoga di usiamu yang baru ini, Nada senantiasa diberikan kesehatan, kedamaian hati, dan perlindungan-Nya di mana pun berada. 🤲🏻💖</span>,
+          <span>Semoga di usiamu yang baru ini, sayangku senantiasa diberikan kesehatan, kedamaian hati, dan perlindungan-Nya di mana pun berada. 🤲🏻💖</span>,
           <span>May your genuine, radiant smile always brighten up every single day of your life! ✨</span>,
-          <span>Semoga seluruh impian, cita-cita, dan harapan yang Nada perjuangkan dapat terwujud satu per satu dengan indah. 🌸</span>,
+          <span>Semoga seluruh impian, cita-cita, dan harapan yang sayangku perjuangkan dapat terwujud satu per satu dengan indah. 🌸</span>,
           <span>May our love and bond grow stronger, sweeter, and more mature with each passing year. 🥂</span>,
           <span>Terima kasih telah lahir ke dunia dan menjadi sosok yang begitu berarti dalam hidupku. Happy Birthday, my love! 🎂🎁💝</span>
         ].map((item, i) => (
@@ -395,7 +395,7 @@ export default function LoveLetter({ onNext }) {
           }}>Surat Ulang Tahun</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Nada 💖</p>
+          }}>Untuk Sayangku 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
@@ -421,10 +421,10 @@ export default function LoveLetter({ onNext }) {
             <h1 style={{
               fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--pink-deep)',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Happy Birthday, Nada! 🎂✨</h1>
+            }}>Happy Birthday, Sayangku! 🎂✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
-            }}>Surat cinta dan doa terbaik di hari ulang tahunmu 🌸</p>
+            }}>Surat cinta dan doa terbaik untuk sayangku 🌸</p>
           </div>
 
           {/* Navigation */}

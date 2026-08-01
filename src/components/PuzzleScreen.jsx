@@ -88,7 +88,7 @@ export default function PuzzleScreen({ onComplete }) {
             fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--berry)', 
             marginBottom: 6, lineHeight: 1.1
           }}>
-            Puzzle Kenangan Nada
+            Puzzle Kenangan Sayangku
           </h2>
           <p style={{ 
             fontFamily: 'var(--font-cute)', fontSize: '0.85rem', color: 'var(--pink-deep)', 

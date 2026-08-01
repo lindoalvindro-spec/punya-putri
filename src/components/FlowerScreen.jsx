@@ -215,7 +215,7 @@ export default function FlowerScreen({ onRestart }) {
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
-                Bunga ini diberikan bukan hanya karena hari ini spesial, tetapi karena Nada selalu spesial dalam hidupku. Setiap kelopaknya mengingatkanku pada hal-hal indah dari Nada—senyumanmu, tawamu, dan caramu yang selalu membuatku merasa dicintai. No matter how beautiful these flowers are, they still can't compare to you.
+                Bunga ini diberikan bukan hanya karena hari ini spesial, tetapi karena sayangku selalu spesial dalam hidupku. Setiap kelopaknya mengingatkanku pada hal-hal indah dari sayangku—senyumanmu, tawamu, dan caramu yang selalu membuatku merasa dicintai. No matter how beautiful these flowers are, they still can't compare to you.
               </p>
               
               <div style={{
