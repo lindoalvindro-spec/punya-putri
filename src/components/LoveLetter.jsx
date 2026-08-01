@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Heart, ArrowRight, Sparkles, Quote } from 'lucide-react';
 import gsap from 'gsap';
 
-// ─── 💌 Tab 1: Surat Content (High-End Romantic Letter for Girlfriend) ───
+// ─── 💌 Tab 1: Surat Content (High-End Romantic Birthday Letter) ───
 function LetterTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -43,7 +43,7 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(212,163,89,0.4)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/gambar 34.jpeg" alt="Dedee" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <img src="/gambar 34.jpeg" alt="Nada" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           onError={(e) => { e.target.src = '/gambar 34.jpeg'; }} />
       </div>
 
@@ -57,7 +57,7 @@ function LetterTab() {
         }}>
           <Sparkles size={13} color="var(--pink-deep)" />
           <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: 'var(--pink-deep)', letterSpacing: '0.5px' }}>
-            HAPPY GIRLFRIEND DAY!! 💖✨
+            HAPPY BIRTHDAY, MY LOVE!! 🎂✨
           </span>
         </div>
 
@@ -66,21 +66,21 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: 'var(--pink-deep)',
           lineHeight: 1.2, margin: '4px 0 10px 0'
         }}>
-          Dedee cayaangg,
+          Dearest Nada,
         </h3>
       </div>
 
       {/* Paragraph 1 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500, letterSpacing: '0.2px' }}>
-        di hariii spesiaall iniiiyy dilgaa cumaaa mauuu bilanggg telimakacihhh  yannggg sebesarrr besarrrnaaa. Telimakacihhh kalnaaa cudaa hadir di hidup dilgaaa,dedee bawaa banyaaaa kehangatan buattt dilgaaa,dan sayangiii dilgaa dengan tulus apaaa adanaaaa.
+        Happy Birthday to the most beautiful and precious person in my life! Di hari yang sangat spesial ini, aku ingin mengucapkan terima kasih yang paling tulus. Terima kasih sudah lahir ke dunia ini dan memilih untuk tumbuh bersama menjalani hari-hari bersamaku.
       </p>
 
-      {/* Paragraph 2 (Dikeluarkan dari quote box) */}
+      {/* Paragraph 2 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16, fontWeight: 500 }}>
-        Kadang dilgaaa masih ndaaa nyangkaaa bicaa punyaaa perempuan sebaik dan sesabaaarr dedeee. Di saat dilgaaa capee sama duniaa dilgaa, dedee selalu jadi tempat paliingggg nyaman buattt pulang.
+        Every single day spent with you is a priceless gift. Di tengah ramainya dunia dan rasa lelah, tawa serta kehangatanmu selalu menjadi tempat paling aman dan nyaman untuk hatiku berpulang.
       </p>
 
-      {/* 🌟 Romantic Quote Highlight Box (Teks Baru) */}
+      {/* 🌟 Romantic Quote Highlight Box */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
         margin: '18px 0',
         padding: '16px 18px',
@@ -101,24 +101,24 @@ function LetterTab() {
             lineHeight: 1.75,
             fontWeight: 600,
           }}>
-            "Being with you feels like home. Dilgaaa selalu berharap bebee bisaaa teyuss bahagiaa yaaa, merasaaa dicintai, dan selalu nyamaann jadi diri bebee sendiri di samping dilgaaa. I'll always be here to support you in every step you take."
+            "Being with you feels like home. Aku selalu berdoa agar di usiamu yang baru ini, Nada bisa terus tumbuh dengan penuh kebahagiaan, merasa sangat dicintai setiap hari, dan selalu nyaman menjadi diri sendiri. I'll always be right here, standing by your side in every step of your journey."
           </p>
         </div>
       </div>
 
       {/* Paragraph 3 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
-        Dilgaa beruntung buangeettt bisa memiliki dedeee di sisi dilgaaa .
+        I feel truly blessed and lucky to walk through life with someone as kind, patient, intelligent, and wonderful as you.
       </p>
 
       {/* Paragraph 4 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
-        Semoga hariii ini dan hari hari ke depaannaa, senyuman  dedee semakinnn bersinar. Always take care, stay safe, stay happy, and stay with me forever! 💝
+        Semoga di usiamu yang baru ini, setiap impian yang kamu harapkan semakin dekat untuk terwujud, kesehatanmu selalu terjaga, dan senyuman manismu tidak pernah pudar. Always stay safe, stay bright, and keep holding my hand! 💝
       </p>
 
       {/* Paragraph 5 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18, fontWeight: 500 }}>
-        Happy Girlfriend Day, kecayangaann  dilgaaa. Tetap jadiyy rumah buat buatt dilgaa kapann punn yaaa.
+        Happy Birthday, my darling. Thank you for making my world a so much brighter and happier place.
       </p>
 
       {/* Handwritten Sign-Off Card */}
@@ -133,7 +133,7 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: 'var(--pink-deep)',
           lineHeight: 1.35, margin: 0, fontWeight: 700
         }}>
-          Happy Girlfriend Day, bebee! I love you today, tomorrow, and forever. 😻🫂💝
+          Happy Birthday, Nada! I love you today, tomorrow, and for all the years to come. 🎂✨💖
         </p>
       </div>
     </div>
@@ -160,31 +160,31 @@ function ImpianTab() {
 
   const dreams = [
     {
-      icon: '🌷',
+      icon: '🎂',
       badge: 'DREAM 01',
-      title: 'Selalu Bahagia Bareng',
-      text: 'Bicaa teyusss lewatiinn banyaaaaa hari indah bareng dedeee, saling melangkaapii, dan ngerayaiinn setiap momen bahagiaa kitaa bersamaaa.',
+      title: 'Merayakan Setiap Musim Usia',
+      text: 'Terus merayakan setiap ulang tahun dan momen berharga bersamamu, tumbuh dewasa bersama, serta saling melengkapi di setiap langkah.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.18), rgba(248,164,190,0.25))',
     },
     {
-      icon: '🌹',
+      icon: '🌟',
       badge: 'DREAM 02',
-      title: 'Saling Support & Tumbuh',
-      text: 'Saling dukuungg setiaapp  impian dan citaaa citaaa dedeee, tumbuh jadiii pribadiii yang lebih baiikkk,dan selalu jadiii tempat dedee pulangg.',
+      title: 'Always Supporting Your Growth',
+      text: 'Selalu ada di garda terdepan untuk mendukung setiap impian, karir, dan cita-cita Nada. I will always be your biggest cheerleader.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
-      icon: '🌻',
+      icon: '✈️',
       badge: 'DREAM 03',
-      title: 'Petualangan & Kenangan Indah',
-      text: 'Bikin lebiihh banyaaa kenangaann manis bareengg, jalaaan jalan ke tempaatt impiaann kita, daan nikmatiii  setiaap momennn indah barengg dedeee.',
+      title: 'Petualangan & Kenangan Baru',
+      text: 'Creating endless new memories together, mengelilingi tempat-tempat impian kita, dan mengabadikan setiap senyum bahagiamu.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(255,245,248,0.4))',
     },
     {
       icon: '💍',
       badge: 'DREAM 04',
-      title: 'Masa Depan Indah ✨',
-      text: 'jagainnn hubungan iniyy dengan penuhhh kasiihh cayaangg, rasaa salingg percayaaa, dan kehangataannn yangg selaluu ada setiapp harinaaaa.',
+      title: 'Masa Depan Bersama ✨',
+      text: 'Merawat hubungan ini dengan rasa saling percaya, kedewasaan, dan kasih sayang yang semakin dalam dari tahun ke tahun.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
@@ -201,7 +201,7 @@ function ImpianTab() {
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Impian Bersama 💫</h4>
+        }}>Impian & Masa Depan 💫</h4>
       </div>
 
       {dreams.map((item, i) => (
@@ -257,7 +257,7 @@ function ImpianTab() {
   );
 }
 
-// ─── 🎁 Tab 3: Doa & Pesan Warm Wishes ───
+// ─── 🎁 Tab 3: Doa & Pesan Birthday Wishes ───
 function WishesTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -287,16 +287,16 @@ function WishesTab() {
         <h4 style={{
           fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--pink-deep)',
           lineHeight: 1.2
-        }}>Special Wishes For You ✨</h4>
+        }}>Birthday Wishes & Prayers ✨</h4>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span>Semogaa bebee selaluuu sehatt bahagiyaaa, dan dilindungii di manaaa punn bebee berada💝</span>,
-          <span>May your beautiful smile always brighten up every single day! 😽</span>,
-          <span>Semoga semuuaa citaa citaaa dan impian bebeeee bicaaa tercapaii satuu per satuu yaa🫶🏻</span>,
-          <span>Semoga hubungaann kitaaa semakinnn erat, penuhh kasihh cayaangg, dan selalu bahagiaaa. 💋</span>,
-          <span>Telimakacihhhh cudaaa jadi perempuaann yangg paling berartiii buatt dilgaa setelah hadirnaa mamaa dan telimakacihh jugaaa selalu adaaa buaatt dilgaa! 🫂❤️🩹</span>
+          <span>Semoga di usiamu yang baru ini, Nada senantiasa diberikan kesehatan, kedamaian hati, dan perlindungan-Nya di mana pun berada. 🤲🏻💖</span>,
+          <span>May your genuine, radiant smile always brighten up every single day of your life! ✨</span>,
+          <span>Semoga seluruh impian, cita-cita, dan harapan yang Nada perjuangkan dapat terwujud satu per satu dengan indah. 🌸</span>,
+          <span>May our love and bond grow stronger, sweeter, and more mature with each passing year. 🥂</span>,
+          <span>Terima kasih telah lahir ke dunia dan menjadi sosok yang begitu berarti dalam hidupku. Happy Birthday, my love! 🎂🎁💝</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
@@ -392,16 +392,16 @@ export default function LoveLetter({ onNext }) {
 
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--berry)', marginBottom: 6,
-          }}>Surat Girlfriend Day</h2>
+          }}>Surat Ulang Tahun</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Bebee 💖</p>
+          }}>Untuk Nada 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
             background: 'rgba(212,163,89,0.12)', color: 'var(--pink-deep)',
             padding: '8px 18px', borderRadius: 20, display: 'inline-block',
-            border: '1px solid rgba(212,163,89,0.3)',
+            border: '1.5px solid rgba(212,163,89,0.3)',
           }}>
             👆 Ketuk untuk membuka surat
           </div>
@@ -421,10 +421,10 @@ export default function LoveLetter({ onNext }) {
             <h1 style={{
               fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--pink-deep)',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Happy Girlfriend Day! ✨</h1>
+            }}>Happy Birthday, Nada! 🎂✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
-            }}>pesannn dan harapan dilgaa buat kakaa 🌸</p>
+            }}>Surat cinta dan doa terbaik di hari ulang tahunmu 🌸</p>
           </div>
 
           {/* Navigation */}

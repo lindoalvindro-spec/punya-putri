@@ -8,14 +8,14 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const exhibits = [
-    { src: '/31.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
-    { src: '/gambar 32.jpeg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
-    { src: '/gambar 33.jpeg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
-    { src: '/gambar 34.jpeg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
-    { src: '/gambar 35.jpeg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
-    { src: '/gambar 36.jpeg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
-    { src: '/gambar 37.jpeg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
-    { src: '/gambar 38.jpeg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
+    { src: '/gambar 60.jpg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
+    { src: '/gambar 61.jpg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
+    { src: '/gambar 62.jpg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
+    { src: '/gambar 63.jpg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
+    { src: '/gambar 64.jpg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
+    { src: '/gambar 65.jpg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
+    { src: '/gambar 66.jpg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
+    { src: '/gambar 67.jpg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
   ];
 
   useEffect(() => {
@@ -88,12 +88,12 @@ export default function MemoryGallery({ onNext }) {
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Bebee’s Photo Gallery 🌸
+          Nada’s Photo Gallery 🌸
         </h1>
         <p style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: 'var(--rose-gold)', fontWeight: 600,
         }}>
-          Delapan potret keindahan & keceriaan Bebee ✨
+          Delapan potret keindahan & keceriaan Nada ✨
         </p>
       </div>
 
@@ -139,7 +139,7 @@ export default function MemoryGallery({ onNext }) {
               width: '100%', height: '100%', objectFit: 'cover',
               transformOrigin: 'center center'
             }}
-            onError={(e) => { e.target.src = '/gambar 32.jpeg'; }}
+            onError={(e) => { e.target.src = '/gambar 60.jpg'; }}
           />
 
           {/* Lightbox Inspect Trigger */}

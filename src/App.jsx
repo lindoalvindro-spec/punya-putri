@@ -9,8 +9,6 @@ import BirthdayCake from './components/BirthdayCake';
 import MemoryGallery from './components/MemoryGallery';
 import BirthdayWishCard from './components/BirthdayWishCard';
 import SpotifyPlayer from './components/SpotifyPlayer';
-import LoveQRGenerator from './components/LoveQRGenerator';
-import { QrCode } from 'lucide-react';
 
 const HEART_EMOJIS = ['💕', '💗', '🩷', '♡', '✿', '🌸', '⋆'];
 
@@ -45,14 +43,12 @@ function FloatingHearts() {
 }
 
 export default function App() {
-  // Flow: splash → pin → puzzle → letter → cake → gallery → wishcard → flower → qr
+  // Flow: splash → pin → puzzle → letter → cake → gallery → wishcard → flower
   const [stage, setStage] = useState('splash');
-  const [prevStage, setPrevStage] = useState('splash');
   const stageRef = useRef(null);
 
   const transitionTo = (next) => {
     if (!stageRef.current) { 
-      setPrevStage(stage);
       setStage(next); 
       return; 
     }
@@ -60,7 +56,6 @@ export default function App() {
       opacity: 0, y: 30,
       duration: 0.35, ease: 'power2.in',
       onComplete: () => {
-        setPrevStage(stage);
         setStage(next);
         // Scroll to top for scrollable stages
         const shell = document.querySelector('.app-shell');
@@ -78,38 +73,10 @@ export default function App() {
     });
   };
 
-  const showPlayer = stage !== 'splash' && stage !== 'pin' && stage !== 'qr';
+  const showPlayer = stage !== 'splash' && stage !== 'pin';
 
   return (
     <div className="app-shell">
-      {/* Floating QR Shortcut Button (visible on main app screens) */}
-      {stage !== 'qr' && stage !== 'splash' && stage !== 'pin' && (
-        <button
-          onClick={() => transitionTo('qr')}
-          style={{
-            position: 'fixed',
-            top: '16px',
-            right: '16px',
-            zIndex: 99,
-            background: 'linear-gradient(135deg, #ff4b72, #ff758c)',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '50px',
-            padding: '8px 14px',
-            fontSize: '0.85rem',
-            fontWeight: 'bold',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            boxShadow: '0 4px 15px rgba(255, 75, 114, 0.4)',
-            cursor: 'pointer',
-          }}
-          title="Buka QR Love Generator"
-        >
-          <QrCode size={16} /> QR Love
-        </button>
-      )}
-
       {/* Background Layer (visible on non-splash stages) */}
       {stage !== 'splash' && (
         <div className="bg-layer">
@@ -145,12 +112,6 @@ export default function App() {
         )}
         {stage === 'flower' && (
           <FlowerScreen onRestart={() => transitionTo('splash')} />
-        )}
-        {stage === 'qr' && (
-          <LoveQRGenerator
-            onBack={() => transitionTo(prevStage || 'splash')}
-            defaultUrl="https://bebeebgirlfriendday.netlify.app/"
-          />
         )}
       </div>
 

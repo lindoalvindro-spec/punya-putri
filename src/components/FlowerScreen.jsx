@@ -215,7 +215,7 @@ export default function FlowerScreen({ onRestart }) {
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
-                dilgaaa kacihhh bungaa inii bukan hanya kalnaaa harii iniyyy speciaal, tapii kalnaa dedee selalu speciall bagii dilgaa. Setiap kelopaknaaa ingetinnn dilgaaa hal hal kecil yang dilgaa cukaaa darii dedee, yaituw senyumm naa dedee, tawanaa dedee, dan caraa dedee bikinn dilgaa merasaa dicintaiii. No matter how beautiful these flowers are, they still can't compare to you.
+                Bunga ini diberikan bukan hanya karena hari ini spesial, tetapi karena Nada selalu spesial dalam hidupku. Setiap kelopaknya mengingatkanku pada hal-hal indah dari Nada—senyumanmu, tawamu, dan caramu yang selalu membuatku merasa dicintai. No matter how beautiful these flowers are, they still can't compare to you.
               </p>
               
               <div style={{
@@ -227,7 +227,7 @@ export default function FlowerScreen({ onRestart }) {
                 color: 'var(--pink-deep)',
                 lineHeight: 1.35,
               }}>
-                Telimakacihh cudaa jadii perempuan yang selaluuu berhasill bikinnn hatii dilgaa pulang. ♡
+                Thank you for being the person who always makes my heart feel at home. ♡
               </div>
             </div>
 

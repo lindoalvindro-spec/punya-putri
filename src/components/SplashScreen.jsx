@@ -115,16 +115,16 @@ export default function SplashScreen({ onStart }) {
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', overflow: 'hidden',
     }}>
-      {/* Background Hero Photo (gambar 32.jpeg) */}
+      {/* Background Hero Photo (gambar 61.jpg) */}
       <img
         ref={photoRef}
-        src="/gambar 32.jpeg"
-        alt="Happy Girlfriend Day"
+        src="/gambar 61.jpg"
+        alt="Happy Birthday Nada"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
         }}
-        onError={(e) => { e.target.src = '/gambar 32.jpeg'; }}
+        onError={(e) => { e.target.src = '/gambar 61.jpg'; }}
       />
 
       {/* Luxury Dark Gradient Overlay */}
@@ -176,7 +176,7 @@ export default function SplashScreen({ onStart }) {
             fontFamily: 'var(--font-cute)', fontSize: '0.72rem', fontWeight: 700,
             color: 'var(--gold-light)', letterSpacing: '1.5px', textTransform: 'uppercase',
           }}>
-            Happy Girlfriend Day 💖
+            Happy Birthday Nada 🎂💖
           </span>
         </div>
 
@@ -195,7 +195,7 @@ export default function SplashScreen({ onStart }) {
           lineHeight: 1.1, marginBottom: 12, opacity: 0,
           textShadow: '0 4px 25px rgba(212, 69, 108, 0.6), 0 0 40px rgba(212, 163, 89, 0.4)',
         }}>
-          Bebee 👑
+          Nada 👑
         </h1>
 
         <p ref={line3Ref} style={{

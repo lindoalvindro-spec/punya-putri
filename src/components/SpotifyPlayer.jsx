@@ -134,7 +134,7 @@ export default function SpotifyPlayer() {
       {/* Audio Element */}
       <audio
         ref={audioRef}
-        src="/THANK YOU 4 LOVIN' ME_spotdown.org.mp3"
+        src="/Shape of My Heart_spotdown.org.mp3"
         preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
@@ -172,10 +172,10 @@ export default function SpotifyPlayer() {
             border: '1.5px solid #1DB954',
           }}>
             <img
-              src="/gambar saul.jpg"
-              alt="Thank You 4 Lovin' Me"
+              src="/Shape of my heart Backstreet Boys.jfif"
+              alt="Shape of My Heart"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onError={(e) => { e.target.src = '/gambar saul.jpg'; }}
+              onError={(e) => { e.target.src = '/Shape of my heart Backstreet Boys.jfif'; }}
             />
             {playing && (
               <div className="anim-spin" style={{
@@ -193,7 +193,7 @@ export default function SpotifyPlayer() {
               fontSize: '0.78rem', fontWeight: 700, color: '#ffffff',
               lineHeight: 1.1, whiteSpace: 'nowrap'
             }}>
-              Thank You 4 Lovin' Me
+              Shape of My Heart
             </div>
             <div style={{
               fontSize: '0.66rem', color: '#1DB954', fontWeight: 600,
@@ -266,10 +266,10 @@ export default function SpotifyPlayer() {
             background: '#282828',
           }}>
             <img
-              src="/gambar saul.jpg"
-              alt="Thank You 4 Lovin' Me"
+              src="/Shape of my heart Backstreet Boys.jfif"
+              alt="Shape of My Heart"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onError={(e) => { e.target.src = '/gambar saul.jpg'; }}
+              onError={(e) => { e.target.src = '/Shape of my heart Backstreet Boys.jfif'; }}
             />
             {playing && (
               <div style={{
@@ -293,13 +293,13 @@ export default function SpotifyPlayer() {
                   whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
                   letterSpacing: '-0.2px'
                 }}>
-                  Thank You 4 Lovin' Me
+                  Shape of My Heart
                 </div>
                 <div style={{
                   fontSize: '0.74rem', color: '#b3b3b3', fontWeight: 500,
                   whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: 1
                 }}>
-                  Paul Partohap
+                  Backstreet Boys
                 </div>
               </div>
 

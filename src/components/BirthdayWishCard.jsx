@@ -113,9 +113,9 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 boxShadow: '0 12px 32px rgba(200,59,100,0.25)',
                 position: 'relative', zIndex: 1
               }}>
-                <img src="/gambar 36.jpeg" alt="Happy Girlfriend Day" style={{
+                <img src="/gambar 63.jpg" alt="Happy Birthday" style={{
                   width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center'
-                }} onError={(e) => { e.target.src = '/gambar 36.jpeg'; }} />
+                }} onError={(e) => { e.target.src = '/gambar 63.jpg'; }} />
               </div>
             </div>
 
@@ -124,7 +124,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
               fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: 'var(--rose-gold)',
               letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 4, fontWeight: 700
             }}>
-              Official Girlfriend Day Card
+              Official Birthday Card
             </h3>
             
             <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 18 }}>
@@ -132,7 +132,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: 'var(--pink-deep)',
                 lineHeight: 1, margin: 0
               }}>
-                Bebee 💖
+                Nada 💖
               </h1>
             </div>
 
@@ -146,7 +146,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
               fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry-light)',
               lineHeight: 1.7, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
             }}>
-              "Happy Girlfriend Day! Thank you for bringing so much warmth, laughter, and happiness every single day. Always stay safe, stay healthy, stay bright, and keep wearing that beautiful smile!"
+              "Happy Birthday, my love! Thank you for bringing so much warmth, laughter, and happiness into my life every single day. Wishing you endless joy, health, and success on your special day!"
             </p>
 
             {/* Sign Off */}
@@ -155,7 +155,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 With Endless Love & Appreciation
               </p>
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: 'var(--pink-deep)' }}>
-                Happy Girlfriend Day, Bebee! 🌸💖
+                Happy Birthday, Nada! 🎂🌸💖
               </p>
             </div>
 
