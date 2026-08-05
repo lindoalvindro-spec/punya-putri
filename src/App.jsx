@@ -10,7 +10,7 @@ import MemoryGallery from './components/MemoryGallery';
 import BirthdayWishCard from './components/BirthdayWishCard';
 import SpotifyPlayer from './components/SpotifyPlayer';
 
-const HEART_EMOJIS = ['💕', '💗', '🩷', '♡', '✿', '🌸', '⋆'];
+const HEART_EMOJIS = ['💕', '💗', '💖', '♡', '✿', '🌸', '⋆'];
 
 function FloatingHearts() {
   const hearts = Array.from({ length: 14 }, (_, i) => ({
@@ -115,8 +115,8 @@ export default function App() {
         )}
       </div>
 
-      {/* Spotify Player (hidden on splash & pin) */}
-      {showPlayer && <SpotifyPlayer />}
+      {/* Spotify Player (hidden on splash & pin, autoplays after puzzle) */}
+      {showPlayer && <SpotifyPlayer autoPlay={stage !== 'splash' && stage !== 'pin' && stage !== 'puzzle'} />}
     </div>
   );
 }

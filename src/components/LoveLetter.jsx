@@ -43,8 +43,8 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(212,163,89,0.4)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/gambar 60.jpg" alt="Sayangku" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          onError={(e) => { e.target.src = '/gambar 60.jpg'; }} />
+        <img src="/putri 9.jpeg" alt="Putri" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={(e) => { e.target.src = '/putri 9.jpeg'; }} />
       </div>
 
       {/* Opening Badge Header */}
@@ -66,18 +66,18 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: 'var(--pink-deep)',
           lineHeight: 1.2, margin: '4px 0 10px 0'
         }}>
-          Dearest Sayangku,
+          Dearest Putri,
         </h3>
       </div>
 
       {/* Paragraph 1 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500, letterSpacing: '0.2px' }}>
-        Happy Birthday to the most beautiful and precious person in my life! Di hari yang sangat spesial ini, aku ingin mengucapkan terima kasih yang paling tulus. Terima kasih sudah lahir ke dunia ini dan memilih untuk tumbuh bersama menjalani hari-hari bersamaku.
+        Happy 20th Birthday to someone who means so much to me! Di hari yang spesial ini, aku cuma mau bilang betapa bersyukurnya aku punya kamu dalam hidupku. Thank you for always being you, and for bringing so much warmth and light into my days.
       </p>
 
       {/* Paragraph 2 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16, fontWeight: 500 }}>
-        Every single day spent with you is a priceless gift. Di tengah ramainya dunia dan rasa lelah, tawa serta kehangatanmu selalu menjadi tempat paling aman dan nyaman untuk hatiku berpulang.
+        Every little moment with you always feels so comforting. Di tengah ramainya hari dan rasa lelah, tawa kamu selalu jadi alasan terbaik untuk bikin mood aku balik lagi. Being around you just feels like home.
       </p>
 
       {/* 🌟 Romantic Quote Highlight Box */}
@@ -101,24 +101,24 @@ function LetterTab() {
             lineHeight: 1.75,
             fontWeight: 600,
           }}>
-            "Being with you feels like home. Aku selalu berdoa agar di usiamu yang baru ini, sayangku bisa terus tumbuh dengan penuh kebahagiaan, merasa sangat dicintai setiap hari, dan selalu nyaman menjadi diri sendiri. I'll always be right here, standing by your side in every step of your journey."
+            "Happy 20th Birthday, my favorite person. Aku selalu berdoa supaya di usiamu yang baru ini, Putri bisa makin bahagia, selalu merasa dicintai, dan makin percaya sama potensi diri sendiri. No matter what comes next, I'll always be right here supporting you."
           </p>
         </div>
       </div>
 
       {/* Paragraph 3 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
-        I feel truly blessed and lucky to walk through life with someone as kind, patient, intelligent, and wonderful as you.
+        I feel super lucky to see you grow into such a kind, smart, and wonderful person. Semoga di umur 20 ini, semua impian dan cita-cita yang lagi Putri perjuangkan bisa perlahan terwujud satu per satu.
       </p>
 
       {/* Paragraph 4 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
-        Semoga di usiamu yang baru ini, setiap impian yang kamu harapkan semakin dekat untuk terwujud, kesehatanmu selalu terjaga, dan senyuman manismu tidak pernah pudar. Always stay safe, stay bright, and keep holding my hand! 💝
+        Stay healthy, stay humble, and keep spreading that bright smile of yours. Once again, happy 20th birthday, Putri! Let's make more beautiful memories together. 💖
       </p>
 
       {/* Paragraph 5 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 18, fontWeight: 500 }}>
-        Happy Birthday, my darling. Thank you for making my world a so much brighter and happier place.
+        Thank you for making my world a so much happier place just by being in it.
       </p>
 
       {/* Handwritten Sign-Off Card */}
@@ -133,7 +133,7 @@ function LetterTab() {
           fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: 'var(--pink-deep)',
           lineHeight: 1.35, margin: 0, fontWeight: 700
         }}>
-          Happy Birthday, Sayangku! I love you today, tomorrow, and for all the years to come. 🎂✨💖
+          Happy 20th Birthday, Putri! Thank you for being my favorite part of every day. 🎂✨💖
         </p>
       </div>
     </div>
@@ -162,29 +162,29 @@ function ImpianTab() {
     {
       icon: '🎂',
       badge: 'DREAM 01',
-      title: 'Merayakan Setiap Musim Usia',
-      text: 'Terus merayakan setiap ulang tahun dan momen berharga bersamamu, tumbuh dewasa bersama, serta saling melengkapi di setiap langkah.',
+      title: 'Growing Together',
+      text: 'Bisa terus merayakan setiap momen berharga dan ulang tahun bareng, supporting each other and growing into better versions of ourselves.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.18), rgba(248,164,190,0.25))',
     },
     {
       icon: '🌟',
       badge: 'DREAM 02',
-      title: 'Always Supporting Your Growth',
-      text: 'Selalu ada di garda terdepan untuk mendukung setiap impian, karir, dan cita-cita sayangku. I will always be your biggest cheerleader.',
+      title: 'Always Support Your Dreams',
+      text: 'Selalu ada di samping Putri untuk mendukung setiap impian, karir, dan passion yang kamu suka. I will always be your biggest supporter.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.15), rgba(255,232,238,0.3))',
     },
     {
       icon: '✈️',
       badge: 'DREAM 03',
-      title: 'Petualangan & Kenangan Baru',
-      text: 'Creating endless new memories together, mengelilingi tempat-tempat impian kita, dan mengabadikan setiap senyum bahagiamu.',
+      title: 'New Adventures & Memories',
+      text: 'Creating endless sweet memories together, bisa jalan-jalan ke tempat impian kita, dan bikin momen-momen seru baru.',
       gradient: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(255,245,248,0.4))',
     },
     {
       icon: '💍',
       badge: 'DREAM 04',
-      title: 'Masa Depan Bersama ✨',
-      text: 'Merawat hubungan ini dengan rasa saling percaya, kedewasaan, dan kasih sayang yang semakin dalam dari tahun ke tahun.',
+      title: 'Building A Beautiful Future',
+      text: 'Bisa merawat hubungan ini dengan penuh rasa saling mengerti, percaya, dan kehangatan yang makin kuat setiap harinya.',
       gradient: 'linear-gradient(135deg, rgba(200,59,100,0.18), rgba(248,164,190,0.3))',
     },
   ];
@@ -292,11 +292,11 @@ function WishesTab() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span>Semoga di usiamu yang baru ini, sayangku senantiasa diberikan kesehatan, kedamaian hati, dan perlindungan-Nya di mana pun berada. 🤲🏻💖</span>,
-          <span>May your genuine, radiant smile always brighten up every single day of your life! ✨</span>,
-          <span>Semoga seluruh impian, cita-cita, dan harapan yang sayangku perjuangkan dapat terwujud satu per satu dengan indah. 🌸</span>,
-          <span>May our love and bond grow stronger, sweeter, and more mature with each passing year. 🥂</span>,
-          <span>Terima kasih telah lahir ke dunia dan menjadi sosok yang begitu berarti dalam hidupku. Happy Birthday, my love! 🎂🎁💝</span>
+          <span>Semoga di usiamu yang ke-20 ini, Putri selalu sehat, selalu merasa tenang, dan makin dilancarkan setiap urusannya. 🤲🏻💖</span>,
+          <span>May your beautiful, genuine smile always bring happiness to everyone around you and brighten up your days! ✨</span>,
+          <span>Semoga semua wishlist, impian, dan hal-hal yang lagi Putri usahakan sekarang bisa terwujud satu per satu dengan indah. 🌸</span>,
+          <span>May our bond grow even warmer, sweeter, and more mature with each passing day. 🥂</span>,
+          <span>Terima kasih sudah jadi sosok yang selalu bikin hari-hariku terasa lebih indah. Happy 20th Birthday, my favorite person! 🎂🎁💝</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
@@ -395,7 +395,7 @@ export default function LoveLetter({ onNext }) {
           }}>Surat Ulang Tahun</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: 'var(--pink-deep)', fontWeight: 600,
-          }}>Untuk Sayangku 💖</p>
+          }}>Untuk Putri 💖</p>
 
           <div style={{
             marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
@@ -421,7 +421,7 @@ export default function LoveLetter({ onNext }) {
             <h1 style={{
               fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--pink-deep)',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Happy Birthday, Sayangku! 🎂✨</h1>
+            }}>Happy Birthday, Putri! 🎂✨</h1>
             <p style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
             }}>Surat cinta dan doa terbaik untuk sayangku 🌸</p>

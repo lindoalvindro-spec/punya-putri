@@ -177,8 +177,9 @@ export default function BirthdayCake({ onShowGallery }) {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
             <Sparkles size={18} color="var(--gold-accent)" />
             <h2 style={{
-              fontFamily: 'var(--font-display)', fontSize: '1.75rem', color: 'var(--berry)', margin: 0,
-            }}>Make a Wish, Sayangku! ✨</h2>
+              fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--berry)',
+              lineHeight: 1.15, marginBottom: 4
+            }}>Make a Wish, Putri! ✨</h2>
             <Sparkles size={18} color="var(--gold-accent)" />
           </div>
           <p style={{
@@ -287,7 +288,7 @@ export default function BirthdayCake({ onShowGallery }) {
                 fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: 'var(--pink-deep)',
                 fontWeight: 700, letterSpacing: '0.5px', margin: 0, lineHeight: 1.1
               }}>
-                Happy Birthday Sayangku! 🎂🌸
+                Happy Birthday Putri! 🎂🌸
               </span>
             </div>
           </div>

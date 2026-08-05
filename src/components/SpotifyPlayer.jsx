@@ -5,8 +5,8 @@ import {
 } from 'lucide-react';
 import gsap from 'gsap';
 
-export default function SpotifyPlayer() {
-  const [playing, setPlaying] = useState(false);
+export default function SpotifyPlayer({ autoPlay = false }) {
+  const [playing, setPlaying] = useState(autoPlay);
   const [muted, setMuted] = useState(false);
   const [liked, setLiked] = useState(true);
   const [expanded, setExpanded] = useState(false);
@@ -17,6 +17,13 @@ export default function SpotifyPlayer() {
   const audioRef = useRef(null);
   const widgetRef = useRef(null);
   const pillRef = useRef(null);
+
+  // Trigger autoPlay when autoPlay prop becomes true
+  useEffect(() => {
+    if (autoPlay) {
+      setPlaying(true);
+    }
+  }, [autoPlay]);
 
   // Handle play/pause
   useEffect(() => {

@@ -215,7 +215,7 @@ export default function FlowerScreen({ onRestart }) {
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
-                Bunga ini diberikan bukan hanya karena hari ini spesial, tetapi karena sayangku selalu spesial dalam hidupku. Setiap kelopaknya mengingatkanku pada hal-hal indah dari sayangku—senyumanmu, tawamu, dan caramu yang selalu membuatku merasa dicintai. No matter how beautiful these flowers are, they still can't compare to you.
+                Bunga ini mungkin sederhana, tapi setiap kelopaknya punya alasan khusus—just like how you bring so much beauty, warmth, and joy into my everyday life. Senyuman Putri, tawa manismu, dan kebaikan hatimu selalu jadi hal favoritku. No matter how beautiful these flowers look, they will never outshine your smile. Happy 20th Birthday, my love! 💖
               </p>
               
               <div style={{
@@ -227,7 +227,7 @@ export default function FlowerScreen({ onRestart }) {
                 color: 'var(--pink-deep)',
                 lineHeight: 1.35,
               }}>
-                Thank you for being the person who always makes my heart feel at home. ♡
+                Thank you for being the sweetest part of my life and making my heart feel at home. ♡
               </div>
             </div>
 

@@ -264,3 +264,98 @@ body {
   background: var(--pink-soft);
   border-radius: 10px;
 }
+
+/* ─── Sparkling 20 & Birthday Typography Styles ─── */
+.sparkling-20-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 20px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 215, 0, 0.75);
+  box-shadow: 0 8px 32px rgba(212, 163, 89, 0.45), 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.35);
+}
+
+.sparkling-20-text {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #ffe27d 20%,
+    #ffffff 40%,
+    #ff8da9 60%,
+    #ffd700 80%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sparkle-shimmer 2.2s linear infinite;
+  filter: drop-shadow(0 2px 12px rgba(255, 215, 0, 0.95)) drop-shadow(0 0 25px rgba(212, 69, 108, 0.75));
+  letter-spacing: 2px;
+}
+
+.sparkling-birthday-text {
+  font-family: var(--font-cute);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff 0%, #ffe082 50%, #ffa4bf 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sparkle-shimmer 3s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255,215,0,0.5));
+}
+
+.birthday-greeting-box {
+  background: rgba(45, 16, 30, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  border-radius: 20px;
+  padding: 12px 18px;
+  margin: 10px 0 16px 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4), inset 0 0 15px rgba(255, 182, 193, 0.15);
+}
+
+.sparkle-icon-left, .sparkle-icon-right {
+  font-size: 1.3rem;
+  animation: sparkle-bounce 1.6s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 8px #ffd700);
+}
+
+.sparkle-icon-right {
+  animation-delay: 0.8s;
+}
+
+@keyframes sparkle-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes sparkle-bounce {
+  0% {
+    transform: scale(0.85) rotate(-10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.25) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+

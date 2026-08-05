@@ -8,14 +8,26 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const exhibits = [
-    { src: '/gambar 60.jpg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
-    { src: '/gambar 61.jpg', tag: 'EXHIBIT #02', title: 'Unfiltered Joy ✨' },
-    { src: '/gambar 62.jpg', tag: 'EXHIBIT #03', title: 'Warm Smile 💖' },
-    { src: '/gambar 63.jpg', tag: 'EXHIBIT #04', title: 'Endless Sunshine ☀️' },
-    { src: '/gambar 64.jpg', tag: 'EXHIBIT #05', title: 'Golden Hour 🌅' },
-    { src: '/gambar 65.jpg', tag: 'EXHIBIT #06', title: 'Precious Moments 💎' },
-    { src: '/gambar 66.jpg', tag: 'EXHIBIT #07', title: 'Charming Soul 🌿' },
-    { src: '/gambar 67.jpg', tag: 'EXHIBIT #08', title: 'Sweet Memories 🍧' },
+    { src: '/putri 1.jpeg', tag: 'EXHIBIT #01', title: 'Pure Radiance 🌸' },
+    { src: '/putri 2.jpeg', tag: 'EXHIBIT #02', title: 'Sweet Smile 💖' },
+    { src: '/putri 3.jpeg', tag: 'EXHIBIT #03', title: 'Unfiltered Joy ✨' },
+    { src: '/putri 4.jpeg', tag: 'EXHIBIT #04', title: 'Warm Smile 💖' },
+    { src: '/putri 5.jpeg', tag: 'EXHIBIT #05', title: 'Endless Sunshine ☀️' },
+    { src: '/putri 6.jpeg', tag: 'EXHIBIT #06', title: 'Golden Hour 🌅' },
+    { src: '/putri 7.jpeg', tag: 'EXHIBIT #07', title: 'Precious Moments 💎' },
+    { src: '/putri 8.jpeg', tag: 'EXHIBIT #08', title: 'Charming Soul 🌿' },
+    { src: '/putri 9.jpeg', tag: 'EXHIBIT #09', title: 'Captivating Eyes 👁️✨' },
+    { src: '/putri 10.jpeg', tag: 'EXHIBIT #10', title: 'Sweet Memories 🍧' },
+    { src: '/putri 11.jpeg', tag: 'EXHIBIT #11', title: 'Beautiful Soul 🌸' },
+    { src: '/putri 12.jpeg', tag: 'EXHIBIT #12', title: 'Sparkling Heart 💖' },
+    { src: '/putri 13.jpeg', tag: 'EXHIBIT #13', title: 'Heavenly Glow ✨' },
+    { src: '/putri 14.jpeg', tag: 'EXHIBIT #14', title: 'Angelic Smile 😇' },
+    { src: '/putri 16.jpeg', tag: 'EXHIBIT #15', title: 'Radiant Beauty 🌺' },
+    { src: '/putri 17.jpeg', tag: 'EXHIBIT #16', title: 'Lovely Charm 💕' },
+    { src: '/putri 18.jpeg', tag: 'EXHIBIT #17', title: 'Magical Moments 🪄' },
+    { src: '/putri 19.jpeg', tag: 'EXHIBIT #18', title: 'Endless Love 💌' },
+    { src: '/putri 20.jpeg', tag: 'EXHIBIT #19', title: 'Graceful Soul 🌿' },
+    { src: '/putri 21.jpeg', tag: 'EXHIBIT #20', title: 'Princess Magic 👑' },
   ];
 
   useEffect(() => {
@@ -81,20 +93,15 @@ export default function MemoryGallery({ onNext }) {
         }}>
           <Sparkles size={13} color="var(--gold-accent)" />
           <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--gold-accent)', letterSpacing: 1.5, textTransform: 'uppercase' }}>
-            The Friendship Exhibition
+            The Love Exhibition
           </span>
         </div>
         <h1 style={{
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Sayangku’s Photo Gallery 🌸
+          Putri’s Photo Gallery 🌸
         </h1>
-        <p style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: 'var(--rose-gold)', fontWeight: 600,
-        }}>
-          Delapan potret keindahan & keceriaan Sayangku ✨
-        </p>
       </div>
 
       {/* Main Exhibition Frame */}
@@ -139,7 +146,7 @@ export default function MemoryGallery({ onNext }) {
               width: '100%', height: '100%', objectFit: 'cover',
               transformOrigin: 'center center'
             }}
-            onError={(e) => { e.target.src = '/gambar 60.jpg'; }}
+            onError={(e) => { e.target.src = '/putri 1.jpeg'; }}
           />
 
           {/* Lightbox Inspect Trigger */}
