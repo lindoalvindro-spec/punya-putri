@@ -215,7 +215,7 @@ export default function FlowerScreen({ onRestart }) {
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
-                Bunga ini mungkin sederhana, tapi setiap kelopaknya punya alasan khusus—just like how you bring so much beauty, warmth, and joy into my everyday life. Senyuman Putri, tawa manismu, dan kebaikan hatimu selalu jadi hal favoritku. No matter how beautiful these flowers look, they will never outshine your smile. Happy 20th Birthday, my love! 💖
+                Bunga ini mungkin sederhana, tapi setiap kelopaknya punya alasan khusus—just like how you bring so much beauty, warmth, and joy into my everyday life. Senyuman Janii, tawa manismu, dan kebaikan hatimu selalu jadi hal favoritku. No matter how beautiful these flowers look, they will never outshine your smile. Happy 20th Birthday, my love! 💖
               </p>
               
               <div style={{

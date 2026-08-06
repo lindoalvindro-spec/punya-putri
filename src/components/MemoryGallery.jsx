@@ -100,7 +100,7 @@ export default function MemoryGallery({ onNext }) {
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--pink-deep)',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Putri’s Photo Gallery 🌸
+          Janii’s Photo Gallery 🌸
         </h1>
       </div>
 

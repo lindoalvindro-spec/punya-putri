@@ -213,13 +213,13 @@ export default function SplashScreen({ onStart }) {
           Special Exhibition Dedicated To
         </p>
 
-        {/* Main Title: Putri */}
+        {/* Main Title: Janii */}
         <h1 ref={line2Ref} style={{
           fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: '#fff',
           lineHeight: 1.15, marginBottom: 10, opacity: 0,
           textShadow: '0 4px 20px rgba(212, 69, 108, 0.7), 0 0 35px rgba(212, 163, 89, 0.5)',
         }}>
-          Putri
+          Janii
         </h1>
 
         {/* Birthday Wish Box & Tagline */}
